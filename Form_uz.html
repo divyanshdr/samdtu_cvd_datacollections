@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Samarkand Yurak Kasalliklari Riskini Baholash</title>
+    <title>Samarkand Yurak Kasalliklari Riski So'rovi</title>
     
 </head>
 <video autoplay muted loop class="video-background">
@@ -82,7 +82,7 @@
                 <legend>Asosiy Tibbiy Xavf Omillari</legend>
                 
                 <div class="form-group">
-                    <label for="diabetes">Sizda shakar kasalligi bormi?</label>
+                    <label for="diabetes">Sizda qandli diabet kasalligi bormi?</label>
                     <div class="radio-group">
                         <input type="radio" name="diabetes" value="Yes" id="diabetes-yes">
                         <label for="diabetes-yes">Ha</label>
@@ -92,17 +92,19 @@
                     </div>
                 </div>
                 
-                <div class="form-group">
-                    <label for="high_cholesterol">Sizda yuqori xolesterin bormi?</label>
-                    <div class="radio-group">
-                        <input type="radio" name="high_cholesterol" value="Yes" id="high-cholesterol-yes">
-                        <label for="high-cholesterol-yes">Ha</label>
-            
-                        <input type="radio" name="high_cholesterol" value="No" id="high-cholesterol-no">
-                        <label for="high-cholesterol-no">Yo'q</label>
-                    </div>
-                </div>
-            
+               <div class="form-group">
+    <label for="high_cholesterol">Sizda yuqori xolesterin bormi?</label>
+    <div class="radio-group">
+        <input type="radio" name="high_cholesterol" value="Yes" id="high-cholesterol-yes">
+        <label for="high-cholesterol-yes">Ha</label>
+
+        <input type="radio" name="high_cholesterol" value="No" id="high-cholesterol-no">
+        <label for="high-cholesterol-no">Yo'q</label>
+
+        <input type="radio" name="high_cholesterol" value="Not checked" id="high-cholesterol-not-checked">
+        <label for="high-cholesterol-not-checked">Tekshirilmagan</label>
+    </div>
+</div>
                 <div class="form-group">
                     <label for="bp_check">So'nggi bir yil ichida qon bosimingizni tekshirdirdingizmi?</label>
                     <div class="radio-group">
@@ -169,53 +171,6 @@
 
           <input type="radio" name="beverages" value="Never" id="beverages-never">
           <label for="beverages-never">Hech qachon</label>
-      </div>
-  </div>
-</fieldset>
-
-<!-- Jismoniy faollik -->
-<fieldset>
-  <legend>Jismoniy Faollik</legend>
-  <div class="form-group">
-      <label for="exercise_intensity">Jismoniy faolligingizning intensivligi qanday?</label>
-      <div class="radio-group">
-          <input type="radio" name="exercise_intensity" value="Mild" id="exercise-intensity-mild">
-          <label for="exercise-intensity-mild">Yengil</label>
-
-          <input type="radio" name="exercise_intensity" value="Moderate" id="exercise-intensity-moderate">
-          <label for="exercise-intensity-moderate">O'rtacha</label>
-
-          <input type="radio" name="exercise_intensity" value="Vigorous" id="exercise-intensity-vigorous">
-          <label for="exercise-intensity-vigorous">Qattiq</label>
-      </div>
-  </div>
-  <div class="form-group">
-      <label for="exercise_type">Asosan qaysi turdagi mashqlarni bajarasiz?</label>
-      <div class="radio-group">
-          <input type="radio" name="exercise_type" value="Walking" id="exercise-type-walking">
-          <label for="exercise-type-walking">Yurish</label>
-
-          <input type="radio" name="exercise_type" value="Jogging" id="exercise-type-jogging">
-          <label for="exercise-type-jogging">Yugurish</label>
-
-          <input type="radio" name="exercise_type" value="Strength" id="exercise-type-strength">
-          <label for="exercise-type-strength">Kuch mashqlari</label>
-
-          <input type="radio" name="exercise_type" value="Yoga" id="exercise-type-yoga">
-          <label for="exercise-type-yoga">Yoga</label>
-      </div>
-  </div>
-  <div class="form-group">
-      <label for="exercise_duration">Bir mashg'ulotda qancha vaqt mashq qilasiz?</label>
-      <div class="radio-group">
-          <input type="radio" name="exercise_duration" value="Less30" id="exercise-duration-less30">
-          <label for="exercise-duration-less30">30 minutdan kam</label>
-
-          <input type="radio" name="exercise_duration" value="30-60" id="exercise-duration-30-60">
-          <label for="exercise-duration-30-60">30-60 minut</label>
-
-          <input type="radio" name="exercise_duration" value="More60" id="exercise-duration-more60">
-          <label for="exercise-duration-more60">60 minutdan ko'proq</label>
       </div>
   </div>
 </fieldset>
@@ -339,7 +294,7 @@
         </div>
     </div>
     <div class="form-group">
-        <label>Uxlashda yoki uxlayotganda qiyinchilik sezarmidingiz?</label>
+        <label>Uxlashda yoki uxlab qolayotganda muammo sezasizmi?</label>
         <div class="radio-group">
             <input type="radio" name="sleep_trouble" value="Never" id="sleep-trouble-never">
             <label for="sleep-trouble-never">Hech qachon</label>
@@ -350,7 +305,7 @@
         </div>
     </div>
     <div class="form-group">
-        <label>Uyqu apnesi tashxisi qo'yilganmi?</label>
+        <label>Uyqu apnoesi tashxisi qo'yilganmi?</label>
         <div class="radio-group">
             <input type="radio" name="sleep_apnea" value="Yes" id="sleep-apnea-yes">
             <label for="sleep-apnea-yes">Ha</label>
@@ -661,37 +616,6 @@
             <label for="sleep-quality-yes">Ha</label>
             <input type="radio" name="sleep_quality" value="No" id="sleep-quality-no">
             <label for="sleep-quality-no">Yo'q</label>
-        </div>
-    </div>
-  </fieldset>
-  
-  <!-- Stress Darajalari -->
-  <fieldset>
-    <legend>Stress Darajalari</legend>
-    <div class="form-group">
-        <label>Kunlik hayotingizda necha marta stressni sezishingiz?</label>
-        <div class="radio-group">
-            <input type="radio" name="stress_level" value="Always" id="stress-always">
-            <label for="stress-always">Har doim</label>
-            <input type="radio" name="stress_level" value="Frequently" id="stress-frequently">
-            <label for="stress-frequently">Tez-tez</label>
-            <input type="radio" name="stress_level" value="Sometimes" id="stress-sometimes">
-            <label for="stress-sometimes">Ba'zan</label>
-            <input type="radio" name="stress_level" value="Rarely" id="stress-rarely">
-            <label for="stress-rarely">Kamdan-kam</label>
-        </div>
-    </div>
-    <div class="form-group">
-        <label>Odatda stressni qanday yengasiz?</label>
-        <div class="radio-group">
-            <input type="radio" name="stress_coping" value="Exercise" id="stress-exercise">
-            <label for="stress-exercise">Jismoniy mashqlar</label>
-            <input type="radio" name="stress_coping" value="Meditation" id="stress-meditation">
-            <label for="stress-meditation">Meditatsiya</label>
-            <input type="radio" name="stress_coping" value="Talking_to_others" id="stress-talking">
-            <label for="stress-talking">Boshqalar bilan gaplashish</label>
-            <input type="radio" name="stress_coping" value="Avoidance" id="stress-avoidance">
-            <label for="stress-avoidance">Qochish</label>
         </div>
     </div>
   </fieldset>
