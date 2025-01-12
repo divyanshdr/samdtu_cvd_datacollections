@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Samarkand Cardiovascular Disease Risk Assessment</title>
+    
+</head>
+<video autoplay muted loop class="video-background">
+  <source src="bg.mp4" type="video/mp4">
+</video>
+<body>
+    <div class="container">
+        <h1>Cardiovascular Disease Risk Survey</h1>
+        <form action="https://script.google.com/macros/s/AKfycbzn-oquzZRWToTHTk60VY-uTiymathP86RLCkVrcUAOwQLmUTE3i03h2SHq8c5B2MHuyg/exec" method="POST">
+            <!-- Demographic Details -->
+            <fieldset>
+                <legend>Demographics & Cultural Background</legend>
+                <div class="form-group">
+                  <label>Age Group</label>
+                  <div class="radio-group">
+                      <input type="radio" name="age_group" value="18-30" id="age-18-30">
+                      <label for="age-18-30">18-30 years</label>
+                      
+                      <input type="radio" name="age_group" value="31-45" id="age-31-45">
+                      <label for="age-31-45">31-45 years</label>
+                      
+                      <input type="radio" name="age_group" value="46-60" id="age-46-60">
+                      <label for="age-46-60">46-60 years</label>
+                      
+                      <input type="radio" name="age_group" value="61-75" id="age-61-75">
+                      <label for="age-61-75">61-75 years</label>
+                      
+                      <input type="radio" name="age_group" value="above-75" id="age-above-75">
+                      <label for="age-above-75">Above 75 years</label>
+                  </div>
+              </div>
+                <div class="form-group">
+                    <label>Gender</label>
+                    <div class="radio-group">
+                        <input type="radio" name="gender" value="Male" id="male">
+                        <label for="male">Male</label>
+                        <input type="radio" name="gender" value="Female" id="female">
+                        <label for="female">Female</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                  <label>Ethnic Background</label>
+                  <div class="radio-group">
+                      <input type="radio" name="ethnicity" value="Uzbek" id="ethnicity-uzbek">
+                      <label for="ethnicity-uzbek">Uzbek</label>
+                      
+                      <input type="radio" name="ethnicity" value="Tajik" id="ethnicity-tajik">
+                      <label for="ethnicity-tajik">Tajik</label>
+                      
+                      <input type="radio" name="ethnicity" value="Russian" id="ethnicity-russian">
+                      <label for="ethnicity-russian">Russian</label>
+                      
+                      <input type="radio" name="ethnicity" value="Other" id="ethnicity-other">
+                      <label for="ethnicity-other">Other</label>
+                  </div>
+              </div>
+              
+              <div class="form-group">
+                <label>Do you regularly attend community gatherings or celebrations?</label>
+                <div class="radio-group">
+                    <input type="radio" name="community_gatherings" value="Often" id="community-gatherings-often">
+                    <label for="community-gatherings-often">Often</label>
+            
+                    <input type="radio" name="community_gatherings" value="Sometimes" id="community-gatherings-sometimes">
+                    <label for="community-gatherings-sometimes">Sometimes</label>
+            
+                    <input type="radio" name="community_gatherings" value="Rarely" id="community-gatherings-rarely">
+                    <label for="community-gatherings-rarely">Rarely</label>
+                </div>
+            </div>
+            </fieldset>
+            
+            <!-- Primary Medical Risk Factors -->
+            <fieldset>
+                <legend>Primary Medical Risk Factors</legend>
+                
+                <div class="form-group">
+                    <label for="diabetes">Do you have diabetes?</label>
+                    <div class="radio-group">
+                        <input type="radio" name="diabetes" value="Yes" id="diabetes-yes">
+                        <label for="diabetes-yes">Yes</label>
+            
+                        <input type="radio" name="diabetes" value="No" id="diabetes-no">
+                        <label for="diabetes-no">No</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="high_cholesterol">Do you have high cholesterol?</label>
+                    <div class="radio-group">
+                        <input type="radio" name="high_cholesterol" value="Yes" id="high-cholesterol-yes">
+                        <label for="high-cholesterol-yes">Yes</label>
+            
+                        <input type="radio" name="high_cholesterol" value="No" id="high-cholesterol-no">
+                        <label for="high-cholesterol-no">No</label>
+                    </div>
+                </div>
+            
+                <div class="form-group">
+                    <label for="bp_check">Have you had your blood pressure checked in the last year?</label>
+                    <div class="radio-group">
+                        <input type="radio" name="bp_check" value="Yes" id="bp-check-yes">
+                        <label for="bp-check-yes">Yes</label>
+            
+                        <input type="radio" name="bp_check" value="No" id="bp-check-no">
+                        <label for="bp-check-no">No</label>
+                    </div>
+                </div>
+            
+                <div class="form-group">
+                    <label for="genetic_disorder">Do you have any genetic disorder?</label>
+                    <div class="radio-group">
+                        <input type="radio" name="genetic_disorder" value="Yes" id="genetic-disorder-yes">
+                        <label for="genetic-disorder-yes">Yes</label>
+            
+                        <input type="radio" name="genetic_disorder" value="No" id="genetic-disorder-no">
+                        <label for="genetic-disorder-no">No</label>
+                    </div>
+                </div>
+            </fieldset>
+            
+           <!-- Family History -->
+            <fieldset>
+             <legend>Family History</legend>
+              <div class="form-group">
+               <label for="family_history_cvd">Does anyone in your family have a history of cardiovascular disease?</label>
+               <div class="radio-group">
+                 <input type="radio" name="family_history_cvd" value="Yes" id="family-history-cvd-yes">
+             <label for="family-history-cvd-yes">Yes</label>
+
+               <input type="radio" name="family_history_cvd" value="No" id="family-history-cvd-no">
+            <label for="family-history-cvd-no">No</label>
+      </div>
+  </div>
+  <div class="form-group">
+      <label for="family_genetic_disorder">Does anyone in your family have genetic disorders?</label>
+      <div class="radio-group">
+          <input type="radio" name="family_genetic_disorder" value="Yes" id="family-genetic-disorder-yes">
+          <label for="family-genetic-disorder-yes">Yes</label>
+
+          <input type="radio" name="family_genetic_disorder" value="No" id="family-genetic-disorder-no">
+          <label for="family-genetic-disorder-no">No</label>
+      </div>
+  </div>
+</fieldset>
+
+<!-- Lifestyle Risk Factors -->
+<fieldset>
+  <legend>Lifestyle Risk Factors</legend>
+  <div class="form-group">
+      <label for="smoking">Do you smoke?</label>
+      <div class="radio-group">
+          <input type="radio" name="smoking" value="Yes" id="smoking-yes">
+          <label for="smoking-yes">Yes</label>
+
+          <input type="radio" name="smoking" value="No" id="smoking-no">
+          <label for="smoking-no">No</label>
+      </div>
+  </div>
+  <div class="form-group">
+      <label for="alcohol">Do you consume alcohol?</label>
+      <div class="radio-group">
+          <input type="radio" name="alcohol" value="Yes" id="alcohol-yes">
+          <label for="alcohol-yes">Yes</label>
+
+          <input type="radio" name="alcohol" value="No" id="alcohol-no">
+          <label for="alcohol-no">No</label>
+      </div>
+  </div>
+  <div class="form-group">
+      <label for="beverages">How often do you consume soft drinks or beverages?</label>
+      <div class="radio-group">
+          <input type="radio" name="beverages" value="Once_a_day" id="beverages-once-a-day">
+          <label for="beverages-once-a-day">Once a day</label>
+
+          <input type="radio" name="beverages" value="2_3_times_a_day" id="beverages-2-3-times-a-day">
+          <label for="beverages-2-3-times-a-day">2-3 times a day</label>
+
+          <input type="radio" name="beverages" value="Regularly" id="beverages-regularly">
+          <label for="beverages-regularly">Regularly</label>
+
+          <input type="radio" name="beverages" value="Never" id="beverages-never">
+          <label for="beverages-never">Never</label>
+      </div>
+  </div>
+</fieldset>
+
+<!-- Physical Activity -->
+<fieldset>
+  <legend>Physical Activity</legend>
+  <div class="form-group">
+      <label for="exercise_intensity">What is the intensity of your physical activity?</label>
+      <div class="radio-group">
+          <input type="radio" name="exercise_intensity" value="Mild" id="exercise-intensity-mild">
+          <label for="exercise-intensity-mild">Mild</label>
+
+          <input type="radio" name="exercise_intensity" value="Moderate" id="exercise-intensity-moderate">
+          <label for="exercise-intensity-moderate">Moderate</label>
+
+          <input type="radio" name="exercise_intensity" value="Vigorous" id="exercise-intensity-vigorous">
+          <label for="exercise-intensity-vigorous">Vigorous</label>
+      </div>
+  </div>
+  <div class="form-group">
+      <label for="exercise_type">What type of exercise do you primarily do?</label>
+      <div class="radio-group">
+          <input type="radio" name="exercise_type" value="Walking" id="exercise-type-walking">
+          <label for="exercise-type-walking">Walking</label>
+
+          <input type="radio" name="exercise_type" value="Jogging" id="exercise-type-jogging">
+          <label for="exercise-type-jogging">Jogging</label>
+
+          <input type="radio" name="exercise_type" value="Strength" id="exercise-type-strength">
+          <label for="exercise-type-strength">Strength Training</label>
+
+          <input type="radio" name="exercise_type" value="Yoga" id="exercise-type-yoga">
+          <label for="exercise-type-yoga">Yoga</label>
+      </div>
+  </div>
+  <div class="form-group">
+      <label for="exercise_duration">How long do you exercise per session?</label>
+      <div class="radio-group">
+          <input type="radio" name="exercise_duration" value="Less30" id="exercise-duration-less30">
+          <label for="exercise-duration-less30">Less than 30 minutes</label>
+
+          <input type="radio" name="exercise_duration" value="30-60" id="exercise-duration-30-60">
+          <label for="exercise-duration-30-60">30-60 minutes</label>
+
+          <input type="radio" name="exercise_duration" value="More60" id="exercise-duration-more60">
+          <label for="exercise-duration-more60">More than 60 minutes</label>
+      </div>
+  </div>
+</fieldset>
+
+<!-- Dietary Habits -->
+<fieldset>
+  <legend>Dietary Habits</legend>
+  <div class="form-group">
+      <label for="breakfast">What do you typically have for breakfast?</label>
+      <div class="radio-group">
+          <input type="radio" name="breakfast" value="Complete" id="breakfast-complete">
+          <label for="breakfast-complete">Complete Breakfast</label>
+
+          <input type="radio" name="breakfast" value="Tea_or_Coffee" id="breakfast-tea-or-coffee">
+          <label for="breakfast-tea-or-coffee">Tea or Coffee</label>
+
+          <input type="radio" name="breakfast" value="Skip" id="breakfast-skip">
+          <label for="breakfast-skip">Skip</label>
+      </div>
+  </div>
+  <div class="form-group">
+      <label for="lunch_calories">How would you rate your lunch?</label>
+      <div class="radio-group">
+          <input type="radio" name="lunch_calories" value="High" id="lunch-calories-high">
+          <label for="lunch-calories-high">High in Calories</label>
+
+          <input type="radio" name="lunch_calories" value="Low" id="lunch-calories-low">
+          <label for="lunch-calories-low">Low in Calories</label>
+      </div>
+  </div>
+  <div class="form-group">
+      <label for="lunch_home_cooked">Do you mostly have home-cooked meals or eat out?</label>
+      <div class="radio-group">
+          <input type="radio" name="lunch_home_cooked" value="Home_cooked" id="lunch-home-cooked">
+          <label for="lunch-home-cooked">Home Cooked</label>
+
+          <input type="radio" name="lunch_home_cooked" value="Eat_out" id="lunch-eat-out">
+          <label for="lunch-eat-out">Eat Out</label>
+      </div>
+  </div>
+  <div class="form-group">
+      <label for="salt_intake">How would you rate your daily salt intake?</label>
+      <div class="radio-group">
+          <input type="radio" name="salt_intake" value="Low" id="salt-intake-low">
+          <label for="salt-intake-low">Low</label>
+
+          <input type="radio" name="salt_intake" value="Moderate" id="salt-intake-moderate">
+          <label for="salt-intake-moderate">Moderate</label>
+
+          <input type="radio" name="salt_intake" value="High" id="salt-intake-high">
+          <label for="salt-intake-high">High</label>
+      </div>
+  </div>
+  <div class="form-group">
+      <label for="diet_preference">What is your dietary preference?</label>
+      <div class="radio-group">
+          <input type="radio" name="diet_preference" value="Regular" id="diet-preference-regular">
+          <label for="diet-preference-regular">Regular Diet</label>
+
+          <input type="radio" name="diet_preference" value="Vegetarian" id="diet-preference-vegetarian">
+          <label for="diet-preference-vegetarian">Vegetarian</label>
+
+          <input type="radio" name="diet_preference" value="Vegan" id="diet-preference-vegan">
+          <label for="diet-preference-vegan">Vegan</label>
+
+          <input type="radio" name="diet_preference" value="Other" id="diet-preference-other">
+          <label for="diet-preference-other">Other</label>
+      </div>
+  </div>
+</fieldset>
+<!-- Traditional Diet and Lifestyle -->
+<fieldset>
+  <legend>Traditional Diet & Lifestyle</legend>
+  <div class="form-group">
+      <label>How often do you consume traditional Uzbek dishes?</label>
+      <div class="radio-group">
+          <input type="radio" name="traditional_food" value="Daily" id="traditional-food-daily">
+          <label for="traditional-food-daily">Daily</label>
+          <input type="radio" name="traditional_food" value="Weekly" id="traditional-food-weekly">
+          <label for="traditional-food-weekly">Weekly</label>
+          <input type="radio" name="traditional_food" value="Rarely" id="traditional-food-rarely">
+          <label for="traditional-food-rarely">Rarely</label>
+      </div>
+  </div>
+  <div class="form-group">
+      <label>How often do you consume plov?</label>
+      <div class="radio-group">
+          <input type="radio" name="plov_consumption" value="Multiple_times_week" id="plov-multiple">
+          <label for="plov-multiple">Multiple times a week</label>
+          <input type="radio" name="plov_consumption" value="Once_week" id="plov-once">
+          <label for="plov-once">Once a week</label>
+          <input type="radio" name="plov_consumption" value="Rarely" id="plov-rarely">
+          <label for="plov-rarely">Rarely</label>
+      </div>
+  </div>
+  <div class="form-group">
+      <label>Do you regularly drink green tea?</label>
+      <div class="radio-group">
+          <input type="radio" name="green_tea" value="Multiple_daily" id="green-tea-multiple">
+          <label for="green-tea-multiple">Multiple times daily</label>
+          <input type="radio" name="green_tea" value="Once_daily" id="green-tea-once">
+          <label for="green-tea-once">Once daily</label>
+          <input type="radio" name="green_tea" value="Rarely" id="green-tea-rarely">
+          <label for="green-tea-rarely">Rarely</label>
+      </div>
+  </div>
+</fieldset>
+
+<!-- Sleep and Recovery -->
+<fieldset>
+  <legend>Sleep and Recovery</legend>
+  <div class="form-group">
+      <label>How would you rate your sleep quality?</label>
+      <div class="radio-group">
+          <input type="radio" name="sleep_quality" value="Poor" id="sleep-poor">
+          <label for="sleep-poor">Poor</label>
+          <input type="radio" name="sleep_quality" value="Average" id="sleep-average">
+          <label for="sleep-average">Average</label>
+          <input type="radio" name="sleep_quality" value="Good" id="sleep-good">
+          <label for="sleep-good">Good</label>
+      </div>
+  </div>
+  <div class="form-group">
+      <label>Do you have trouble falling or staying asleep?</label>
+      <div class="radio-group">
+          <input type="radio" name="sleep_trouble" value="Never" id="sleep-trouble-never">
+          <label for="sleep-trouble-never">Never</label>
+          <input type="radio" name="sleep_trouble" value="Sometimes" id="sleep-trouble-sometimes">
+          <label for="sleep-trouble-sometimes">Sometimes</label>
+          <input type="radio" name="sleep_trouble" value="Often" id="sleep-trouble-often">
+          <label for="sleep-trouble-often">Often</label>
+      </div>
+  </div>
+  <div class="form-group">
+      <label>Have you been diagnosed with sleep apnea?</label>
+      <div class="radio-group">
+          <input type="radio" name="sleep_apnea" value="Yes" id="sleep-apnea-yes">
+          <label for="sleep-apnea-yes">Yes</label>
+          <input type="radio" name="sleep_apnea" value="No" id="sleep-apnea-no">
+          <label for="sleep-apnea-no">No</label>
+      </div>
+  </div>
+</fieldset>
+
+<!-- Mental Health and Stress -->
+<fieldset>
+  <legend>Mental Health and Stress</legend>
+  <div class="form-group">
+      <label>How often do you feel stressed?</label>
+      <div class="radio-group">
+          <input type="radio" name="stress_level" value="Never" id="stress-never">
+          <label for="stress-never">Never</label>
+          <input type="radio" name="stress_level" value="Sometimes" id="stress-sometimes">
+          <label for="stress-sometimes">Sometimes</label>
+          <input type="radio" name="stress_level" value="Often" id="stress-often">
+          <label for="stress-often">Often</label>
+      </div>
+  </div>
+  <div class="form-group">
+      <label>Do you suffer from anxiety or depression?</label>
+      <div class="radio-group">
+          <input type="radio" name="mental_health" value="Yes" id="mental-health-yes">
+          <label for="mental-health-yes">Yes</label>
+          <input type="radio" name="mental_health" value="No" id="mental-health-no">
+          <label for="mental-health-no">No</label>
+          <input type="radio" name="mental_health" value="Sometimes" id="mental-health-sometimes">
+          <label for="mental-health-sometimes">Sometimes</label>
+      </div>
+  </div>
+  <div class="form-group">
+      <label>How often do you get angry?</label>
+      <div class="radio-group">
+          <input type="radio" name="anger_level" value="Never" id="anger-never">
+          <label for="anger-never">Never</label>
+          <input type="radio" name="anger_level" value="Occasionally" id="anger-occasionally">
+          <label for="anger-occasionally">Occasionally</label>
+          <input type="radio" name="anger_level" value="Frequently" id="anger-frequently">
+          <label for="anger-frequently">Frequently</label>
+          <input type="radio" name="anger_level" value="Always" id="anger-always">
+          <label for="anger-always">Always</label>
+      </div>
+  </div>
+  <div class="form-group">
+      <label>How would you rate your work-life balance?</label>
+      <div class="radio-group">
+          <input type="radio" name="work_life_balance" value="Poor" id="work-life-poor">
+          <label for="work-life-poor">Poor</label>
+          <input type="radio" name="work_life_balance" value="Average" id="work-life-average">
+          <label for="work-life-average">Average</label>
+          <input type="radio" name="work_life_balance" value="Good" id="work-life-good">
+          <label for="work-life-good">Good</label>
+      </div>
+  </div>
+</fieldset>
+
+<!-- Environmental Factors -->
+<fieldset>
+  <legend>Environmental Factors</legend>
+  <div class="form-group">
+      <label>How do you typically deal with Samarkand's summer heat?</label>
+      <div class="radio-group">
+          <input type="radio" name="heat_management" value="Stay_indoors" id="heat-indoor">
+          <label for="heat-indoor">Stay indoors with AC</label>
+          <input type="radio" name="heat_management" value="Traditional_methods" id="heat-traditional">
+          <label for="heat-traditional">Traditional cooling methods</label>
+          <input type="radio" name="heat_management" value="Both" id="heat-both">
+          <label for="heat-both">Both</label>
+      </div>
+  </div>
+  <div class="form-group">
+      <label>Do you experience respiratory issues during dust storms?</label>
+      <div class="radio-group">
+          <input type="radio" name="dust_storms" value="Often" id="dust-often">
+          <label for="dust-often">Often</label>
+          <input type="radio" name="dust_storms" value="Sometimes" id="dust-sometimes">
+          <label for="dust-sometimes">Sometimes</label>
+          <input type="radio" name="dust_storms" value="Never" id="dust-never">
+          <label for="dust-never">Never</label>
+      </div>
+  </div>
+  <div class="form-group">
+      <label>Do you live in an area with high air pollution?</label>
+      <div class="radio-group">
+          <input type="radio" name="air_pollution" value="Yes" id="air-pollution-yes">
+          <label for="air-pollution-yes">Yes</label>
+          <input type="radio" name="air_pollution" value="No" id="air-pollution-no">
+          <label for="air-pollution-no">No</label>
+      </div>
+  </div>
+</fieldset>
+<!-- Physical Activity -->
+<fieldset>
+  <legend>Physical Activity</legend>
+  <div class="form-group">
+      <label>How often do you engage in physical exercise?</label>
+      <div class="radio-group">
+          <input type="radio" name="exercise_frequency" value="Daily" id="exercise-daily">
+          <label for="exercise-daily">Daily</label>
+          <input type="radio" name="exercise_frequency" value="Several_times_week" id="exercise-several-week">
+          <label for="exercise-several-week">Several times a week</label>
+          <input type="radio" name="exercise_frequency" value="Once_week" id="exercise-once-week">
+          <label for="exercise-once-week">Once a week</label>
+          <input type="radio" name="exercise_frequency" value="Rarely" id="exercise-rarely">
+          <label for="exercise-rarely">Rarely</label>
+      </div>
+  </div>
+  <div class="form-group">
+      <label>What type of exercise do you usually engage in?</label>
+      <div class="radio-group">
+          <input type="radio" name="exercise_type" value="Cardio" id="exercise-cardio">
+          <label for="exercise-cardio">Cardio</label>
+          <input type="radio" name="exercise_type" value="Strength_Training" id="exercise-strength-training">
+          <label for="exercise-strength-training">Strength Training</label>
+          <input type="radio" name="exercise_type" value="Yoga" id="exercise-yoga">
+          <label for="exercise-yoga">Yoga</label>
+          <input type="radio" name="exercise_type" value="Other" id="exercise-other">
+          <label for="exercise-other">Other</label>
+      </div>
+  </div>
+  <div class="form-group">
+      <label>How long do you typically exercise each session?</label>
+      <div class="radio-group">
+          <input type="radio" name="exercise_duration" value="Under_30_minutes" id="exercise-under-30">
+          <label for="exercise-under-30">Under 30 minutes</label>
+          <input type="radio" name="exercise_duration" value="30_60_minutes" id="exercise-30-60">
+          <label for="exercise-30-60">30-60 minutes</label>
+          <input type="radio" name="exercise_duration" value="Over_60_minutes" id="exercise-over-60">
+          <label for="exercise-over-60">Over 60 minutes</label>
+      </div>
+  </div>
+</fieldset>
+
+<!-- Smoking and Alcohol Consumption -->
+<fieldset>
+  <legend>Smoking & Alcohol Consumption</legend>
+  <div class="form-group">
+      <label>Do you currently smoke?</label>
+      <div class="radio-group">
+          <input type="radio" name="smoking" value="Yes" id="smoking-yes">
+          <label for="smoking-yes">Yes</label>
+          <input type="radio" name="smoking" value="No" id="smoking-no">
+          <label for="smoking-no">No</label>
+      </div>
+  </div>
+  <div class="form-group">
+      <label>If yes, how many cigarettes per day?</label>
+      <div class="radio-group">
+          <input type="radio" name="cigarettes_per_day" value="1_5" id="cigarettes-1-5">
+          <label for="cigarettes-1-5">1-5</label>
+          <input type="radio" name="cigarettes_per_day" value="6_10" id="cigarettes-6-10">
+          <label for="cigarettes-6-10">6-10</label>
+          <input type="radio" name="cigarettes_per_day" value="11_20" id="cigarettes-11-20">
+          <label for="cigarettes-11-20">11-20</label>
+          <input type="radio" name="cigarettes_per_day" value="Over_20" id="cigarettes-over-20">
+          <label for="cigarettes-over-20">Over 20</label>
+      </div>
+  </div>
+  <div class="form-group">
+      <label>Do you consume alcohol?</label>
+      <div class="radio-group">
+          <input type="radio" name="alcohol_consumption" value="Yes" id="alcohol-yes">
+          <label for="alcohol-yes">Yes</label>
+          <input type="radio" name="alcohol_consumption" value="No" id="alcohol-no">
+          <label for="alcohol-no">No</label>
+      </div>
+  </div>
+  <div class="form-group">
+      <label>If yes, how often do you drink?</label>
+      <div class="radio-group">
+          <input type="radio" name="alcohol_frequency" value="Daily" id="alcohol-daily">
+          <label for="alcohol-daily">Daily</label>
+          <input type="radio" name="alcohol_frequency" value="Weekly" id="alcohol-weekly">
+          <label for="alcohol-weekly">Weekly</label>
+          <input type="radio" name="alcohol_frequency" value="Monthly" id="alcohol-monthly">
+          <label for="alcohol-monthly">Monthly</label>
+          <input type="radio" name="alcohol_frequency" value="Rarely" id="alcohol-rarely">
+          <label for="alcohol-rarely">Rarely</label>
+      </div>
+  </div>
+</fieldset>
+
+<!-- Medical History -->
+<fieldset>
+  <legend>Medical History</legend>
+  <div class="form-group">
+      <label>Do you have a family history of cardiovascular diseases?</label>
+      <div class="radio-group">
+          <input type="radio" name="family_history_cvd" value="Yes" id="family-history-yes">
+          <label for="family-history-yes">Yes</label>
+          <input type="radio" name="family_history_cvd" value="No" id="family-history-no">
+          <label for="family-history-no">No</label>
+      </div>
+  </div>
+  <div class="form-group">
+      <label>Have you been diagnosed with any of the following?</label>
+      <div class="radio-group">
+          <input type="radio" name="diagnosed_conditions" value="Hypertension" id="hypertension">
+          <label for="hypertension">Hypertension</label>
+          <input type="radio" name="diagnosed_conditions" value="Diabetes" id="diabetes">
+          <label for="diabetes">Diabetes</label>
+          <input type="radio" name="diagnosed_conditions" value="Cholesterol" id="cholesterol">
+          <label for="cholesterol">High Cholesterol</label>
+          <input type="radio" name="diagnosed_conditions" value="Other" id="other-condition">
+          <label for="other-condition">Other</label>
+      </div>
+  </div>
+  <div class="form-group">
+      <label>Do you take any medications regularly?</label>
+      <div class="radio-group">
+          <input type="radio" name="regular_medications" value="Yes" id="medications-yes">
+          <label for="medications-yes">Yes</label>
+          <input type="radio" name="regular_medications" value="No" id="medications-no">
+          <label for="medications-no">No</label>
+      </div>
+  </div>
+  
+</fieldset>
+
+<!-- Lifestyle Changes -->
+<fieldset>
+  <legend>Lifestyle Changes</legend>
+  <div class="form-group">
+      <label>Are you currently trying to improve your lifestyle for better health?</label>
+      <div class="radio-group">
+          <input type="radio" name="lifestyle_improvement" value="Yes" id="lifestyle-yes">
+          <label for="lifestyle-yes">Yes</label>
+          <input type="radio" name="lifestyle_improvement" value="No" id="lifestyle-no">
+          <label for="lifestyle-no">No</label>
+      </div>
+  </div>
+  <div class="form-group">
+      <label>If yes, what actions have you taken?</label>
+      <div class="radio-group">
+          <input type="radio" name="lifestyle_actions" value="Exercise" id="lifestyle-exercise">
+          <label for="lifestyle-exercise">Exercise</label>
+          <input type="radio" name="lifestyle_actions" value="Diet" id="lifestyle-diet">
+          <label for="lifestyle-diet">Diet</label>
+          <input type="radio" name="lifestyle_actions" value="Sleep" id="lifestyle-sleep">
+          <label for="lifestyle-sleep">Sleep</label>
+          <input type="radio" name="lifestyle_actions" value="Stress_management" id="lifestyle-stress">
+          <label for="lifestyle-stress">Stress Management</label>
+      </div>
+  </div>
+</fieldset>
+<!-- Health Wearables -->
+<fieldset>
+  <legend>Health Wearables</legend>
+  <div class="form-group">
+      <label>Do you currently use a health wearable device (e.g., smartwatch, fitness tracker)?</label>
+      <div class="radio-group">
+          <input type="radio" name="health_wearable" value="Yes" id="wearable-yes">
+          <label for="wearable-yes">Yes</label>
+          <input type="radio" name="health_wearable" value="No" id="wearable-no">
+          <label for="wearable-no">No</label>
+      </div>
+  </div>
+  <div class="form-group">
+      <label>If yes, which type of wearable device do you use?</label>
+      <div class="radio-group">
+          <input type="radio" name="wearable_type" value="Smartwatch" id="wearable-smartwatch">
+          <label for="wearable-smartwatch">Smartwatch</label>
+          <input type="radio" name="wearable_type" value="Fitness_Tracker" id="wearable-fitness-tracker">
+          <label for="wearable-fitness-tracker">Fitness Tracker</label>
+          <input type="radio" name="wearable_type" value="Other" id="wearable-other">
+          <label for="wearable-other">Other</label>
+      </div>
+  </div>
+  <div class="form-group">
+      <label>How often do you use your wearable device?</label>
+      <div class="radio-group">
+          <input type="radio" name="wearable_usage_frequency" value="Daily" id="wearable-daily">
+          <label for="wearable-daily">Daily</label>
+          <input type="radio" name="wearable_usage_frequency" value="Several_times_week" id="wearable-several-week">
+          <label for="wearable-several-week">Several times a week</label>
+          <input type="radio" name="wearable_usage_frequency" value="Rarely" id="wearable-rarely">
+          <label for="wearable-rarely">Rarely</label>
+          <input type="radio" name="wearable_usage_frequency" value="Never" id="wearable-never">
+          <label for="wearable-never">Never</label>
+      </div>
+  </div>
+</fieldset>
+
+<!-- Sleep and Rest -->
+<fieldset>
+  <legend>Sleep & Rest</legend>
+  <div class="form-group">
+      <label>On average, how many hours of sleep do you get each night?</label>
+      <div class="radio-group">
+          <input type="radio" name="sleep_hours" value="Less_than_5" id="sleep-less-5">
+          <label for="sleep-less-5">Less than 5 hours</label>
+          <input type="radio" name="sleep_hours" value="5_7_hours" id="sleep-5-7">
+          <label for="sleep-5-7">5-7 hours</label>
+          <input type="radio" name="sleep_hours" value="8_10_hours" id="sleep-8-10">
+          <label for="sleep-8-10">8-10 hours</label>
+          <input type="radio" name="sleep_hours" value="More_than_10" id="sleep-more-10">
+          <label for="sleep-more-10">More than 10 hours</label>
+      </div>
+  </div>
+  <div class="form-group">
+      <label>Do you feel rested when you wake up?</label>
+      <div class="radio-group">
+          <input type="radio" name="sleep_quality" value="Yes" id="sleep-quality-yes">
+          <label for="sleep-quality-yes">Yes</label>
+          <input type="radio" name="sleep_quality" value="No" id="sleep-quality-no">
+          <label for="sleep-quality-no">No</label>
+      </div>
+  </div>
+</fieldset>
+
+<!-- Stress Levels -->
+<fieldset>
+  <legend>Stress Levels</legend>
+  <div class="form-group">
+      <label>How often do you feel stressed in your daily life?</label>
+      <div class="radio-group">
+          <input type="radio" name="stress_level" value="Always" id="stress-always">
+          <label for="stress-always">Always</label>
+          <input type="radio" name="stress_level" value="Frequently" id="stress-frequently">
+          <label for="stress-frequently">Frequently</label>
+          <input type="radio" name="stress_level" value="Sometimes" id="stress-sometimes">
+          <label for="stress-sometimes">Sometimes</label>
+          <input type="radio" name="stress_level" value="Rarely" id="stress-rarely">
+          <label for="stress-rarely">Rarely</label>
+      </div>
+  </div>
+  <div class="form-group">
+      <label>How do you usually cope with stress?</label>
+      <div class="radio-group">
+          <input type="radio" name="stress_coping" value="Exercise" id="stress-exercise">
+          <label for="stress-exercise">Exercise</label>
+          <input type="radio" name="stress_coping" value="Meditation" id="stress-meditation">
+          <label for="stress-meditation">Meditation</label>
+          <input type="radio" name="stress_coping" value="Talking_to_others" id="stress-talking">
+          <label for="stress-talking">Talking to others</label>
+          <input type="radio" name="stress_coping" value="Avoidance" id="stress-avoidance">
+          <label for="stress-avoidance">Avoidance</label>
+      </div>
+  </div>
+</fieldset>
+
+<!-- Submit Button -->
+<div class="form-group">
+  <button type="submit" class="btn btn-primary">Submit</button>
+</div>

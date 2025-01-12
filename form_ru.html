@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Оценка Риска Сердечно-Сосудистых Заболеваний в Самарканде</title>
+    
+</head>
+<video autoplay muted loop class="video-background">
+  <source src="bg.mp4" type="video/mp4">
+</video>
+<body>
+    <div class="container">
+        <h1>Опрос о Риске Сердечно-Сосудистых Заболеваний</h1>
+        <form action="https://script.google.com/macros/s/AKfycbzn-oquzZRWToTHTk60VY-uTiymathP86RLCkVrcUAOwQLmUTE3i03h2SHq8c5B2MHuyg/exec" method="POST">
+            <!-- Демографические данные -->
+            <fieldset>
+                <legend>Демографические данные и культурное происхождение</legend>
+                <div class="form-group">
+                  <label>Возрастная группа</label>
+                  <div class="radio-group">
+                      <input type="radio" name="age_group" value="18-30" id="age-18-30">
+                      <label for="age-18-30">18-30 лет</label>
+                      
+                      <input type="radio" name="age_group" value="31-45" id="age-31-45">
+                      <label for="age-31-45">31-45 лет</label>
+                      
+                      <input type="radio" name="age_group" value="46-60" id="age-46-60">
+                      <label for="age-46-60">46-60 лет</label>
+                      
+                      <input type="radio" name="age_group" value="61-75" id="age-61-75">
+                      <label for="age-61-75">61-75 лет</label>
+                      
+                      <input type="radio" name="age_group" value="above-75" id="age-above-75">
+                      <label for="age-above-75">Старше 75 лет</label>
+                  </div>
+              </div>
+                <div class="form-group">
+                    <label>Пол</label>
+                    <div class="radio-group">
+                        <input type="radio" name="gender" value="Male" id="male">
+                        <label for="male">Мужской</label>
+                        <input type="radio" name="gender" value="Female" id="female">
+                        <label for="female">Женский</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                  <label>Этническое происхождение</label>
+                  <div class="radio-group">
+                      <input type="radio" name="ethnicity" value="Uzbek" id="ethnicity-uzbek">
+                      <label for="ethnicity-uzbek">Узбек</label>
+                      
+                      <input type="radio" name="ethnicity" value="Tajik" id="ethnicity-tajik">
+                      <label for="ethnicity-tajik">Таджик</label>
+                      
+                      <input type="radio" name="ethnicity" value="Russian" id="ethnicity-russian">
+                      <label for="ethnicity-russian">Русский</label>
+                      
+                      <input type="radio" name="ethnicity" value="Other" id="ethnicity-other">
+                      <label for="ethnicity-other">Другое</label>
+                  </div>
+              </div>
+              
+              <div class="form-group">
+                <label>Вы регулярно посещаете общественные собрания или праздники?</label>
+                <div class="radio-group">
+                    <input type="radio" name="community_gatherings" value="Often" id="community-gatherings-often">
+                    <label for="community-gatherings-often">Часто</label>
+            
+                    <input type="radio" name="community_gatherings" value="Sometimes" id="community-gatherings-sometimes">
+                    <label for="community-gatherings-sometimes">Иногда</label>
+            
+                    <input type="radio" name="community_gatherings" value="Rarely" id="community-gatherings-rarely">
+                    <label for="community-gatherings-rarely">Редко</label>
+                </div>
+            </div>
+            </fieldset>
+            
+            <!-- Основные медицинские риски -->
+            <fieldset>
+                <legend>Основные медицинские риски</legend>
+                
+                <div class="form-group">
+                    <label for="diabetes">Есть ли у вас диабет?</label>
+                    <div class="radio-group">
+                        <input type="radio" name="diabetes" value="Yes" id="diabetes-yes">
+                        <label for="diabetes-yes">Да</label>
+            
+                        <input type="radio" name="diabetes" value="No" id="diabetes-no">
+                        <label for="diabetes-no">Нет</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="high_cholesterol">Есть ли у вас высокий уровень холестерина?</label>
+                    <div class="radio-group">
+                        <input type="radio" name="high_cholesterol" value="Yes" id="high-cholesterol-yes">
+                        <label for="high-cholesterol-yes">Да</label>
+            
+                        <input type="radio" name="high_cholesterol" value="No" id="high-cholesterol-no">
+                        <label for="high-cholesterol-no">Нет</label>
+                    </div>
+                </div>
+            
+                <div class="form-group">
+                    <label for="bp_check">Вы проверяли свое артериальное давление в прошлом году?</label>
+                    <div class="radio-group">
+                        <input type="radio" name="bp_check" value="Yes" id="bp-check-yes">
+                        <label for="bp-check-yes">Да</label>
+            
+                        <input type="radio" name="bp_check" value="No" id="bp-check-no">
+                        <label for="bp-check-no">Нет</label>
+                    </div>
+                </div>
+            
+                <div class="form-group">
+                    <label for="genetic_disorder">Есть ли у вас генетическое заболевание?</label>
+                    <div class="radio-group">
+                        <input type="radio" name="genetic_disorder" value="Yes" id="genetic-disorder-yes">
+                        <label for="genetic-disorder-yes">Да</label>
+            
+                        <input type="radio" name="genetic_disorder" value="No" id="genetic-disorder-no">
+                        <label for="genetic-disorder-no">Нет</label>
+                    </div>
+                </div>
+            </fieldset>
+            
+           <!-- Семейная история -->
+            <fieldset>
+             <legend>Семейная история</legend>
+              <div class="form-group">
+               <label for="family_history_cvd">Есть ли в вашей семье история сердечно-сосудистых заболеваний?</label>
+               <div class="radio-group">
+                 <input type="radio" name="family_history_cvd" value="Yes" id="family-history-cvd-yes">
+             <label for="family-history-cvd-yes">Да</label>
+
+               <input type="radio" name="family_history_cvd" value="No" id="family-history-cvd-no">
+            <label for="family-history-cvd-no">Нет</label>
+      </div>
+  </div>
+  <div class="form-group">
+      <label for="family_genetic_disorder">Есть ли в вашей семье генетические заболевания?</label>
+      <div class="radio-group">
+          <input type="radio" name="family_genetic_disorder" value="Yes" id="family-genetic-disorder-yes">
+          <label for="family-genetic-disorder-yes">Да</label>
+
+          <input type="radio" name="family_genetic_disorder" value="No" id="family-genetic-disorder-no">
+          <label for="family-genetic-disorder-no">Нет</label>
+      </div>
+  </div>
+</fieldset>
+
+<!-- Риски образа жизни -->
+<fieldset>
+  <legend>Риски образа жизни</legend>
+  <div class="form-group">
+      <label for="smoking">Вы курите?</label>
+      <div class="radio-group">
+          <input type="radio" name="smoking" value="Yes" id="smoking-yes">
+          <label for="smoking-yes">Да</label>
+
+          <input type="radio" name="smoking" value="No" id="smoking-no">
+          <label for="smoking-no">Нет</label>
+      </div>
+  </div>
+  <div class="form-group">
+      <label for="alcohol">Вы употребляете алкоголь?</label>
+      <div class="radio-group">
+          <input type="radio" name="alcohol" value="Yes" id="alcohol-yes">
+          <label for="alcohol-yes">Да</label>
+
+          <input type="radio" name="alcohol" value="No" id="alcohol-no">
+          <label for="alcohol-no">Нет</label>
+      </div>
+  </div>
+  <div class="form-group">
+      <label for="beverages">Как часто вы потребляете газированные напитки или напитки?</label>
+      <div class="radio-group">
+          <input type="radio" name="beverages" value="Once_a_day" id="beverages-once-a-day">
+          <label for="beverages-once-a-day">Раз в день</label>
+
+          <input type="radio" name="beverages" value="2_3_times_a_day" id="beverages-2-3-times-a-day">
+          <label for="beverages-2-3-times-a-day">2-3 раза в день</label>
+
+          <input type="radio" name="beverages" value="Regularly" id="beverages-regularly">
+          <label for="beverages-regularly">Регулярно</label>
+
+          <input type="radio" name="beverages" value="Never" id="beverages-never">
+          <label for="beverages-never">Никогда</label>
+      </div>
+  </div>
+</fieldset>
+
+<!-- Физическая активность -->
+<fieldset>
+  <legend>Физическая активность</legend>
+  <div class="form-group">
+      <label for="exercise_intensity">Какова интенсивность вашей физической активности?</label>
+      <div class="radio-group">
+          <input type="radio" name="exercise_intensity" value="Mild" id="exercise-intensity-mild">
+          <label for="exercise-intensity-mild">Легкая</label>
+
+          <input type="radio" name="exercise_intensity" value="Moderate" id="exercise-intensity-moderate">
+          <label for="exercise-intensity-moderate">Умеренная</label>
+
+          <input type="radio" name="exercise_intensity" value="Vigorous" id="exercise-intensity-vigorous">
+          <label for="exercise-intensity-vigorous">Интенсивная</label>
+      </div>
+  </div>
+  <div class="form-group">
+      <label for="exercise_type">Какой вид упражнений вы предпочитаете?</label>
+      <div class="radio-group">
+          <input type="radio" name="exercise_type" value="Walking" id="exercise-type-walking">
+          <label for="exercise-type-walking">Ходьба</label>
+
+          <input type="radio" name="exercise_type" value="Jogging" id="exercise-type-jogging">
+          <label for="exercise-type-jogging">Бег</label>
+
+          <input type="radio" name="exercise_type" value="Strength" id="exercise-type-strength">
+          <label for="exercise-type-strength">Силовые тренировки</label>
+
+          <input type="radio" name="exercise_type" value="Yoga" id="exercise-type-yoga">
+          <label for="exercise-type-yoga">Йога</label>
+      </div>
+  </div>
+  <div class="form-group">
+      <label for="exercise_duration">Сколько времени вы тренируетесь за одно занятие?</label>
+      <div class="radio-group">
+          <input type="radio" name="exercise_duration" value="Less30" id="exercise-duration-less30">
+          <label for="exercise-duration-less30">Менее 30 минут</label>
+
+          <input type="radio" name="exercise_duration" value="30-60" id="exercise-duration-30-60">
+          <label for="exercise-duration-30-60">30-60 минут</label>
+
+          <input type="radio" name="exercise_duration" value="More60" id="exercise-duration-more60">
+          <label for="exercise-duration-more60">Более 60 минут</label>
+      </div>
+  </div>
+</fieldset>
+<!-- Диетические Привычки -->
+<fieldset>
+    <legend>Диетические Привычки</legend>
+    <div class="form-group">
+        <label for="breakfast">Что вы обычно едите на завтрак?</label>
+        <div class="radio-group">
+            <input type="radio" name="breakfast" value="Complete" id="breakfast-complete">
+            <label for="breakfast-complete">Полный Завтрак</label>
+  
+            <input type="radio" name="breakfast" value="Tea_or_Coffee" id="breakfast-tea-or-coffee">
+            <label for="breakfast-tea-or-coffee">Чай или Кофе</label>
+  
+            <input type="radio" name="breakfast" value="Skip" id="breakfast-skip">
+            <label for="breakfast-skip">Пропускаю</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="lunch_calories">Как бы вы оценили свой обед?</label>
+        <div class="radio-group">
+            <input type="radio" name="lunch_calories" value="High" id="lunch-calories-high">
+            <label for="lunch-calories-high">Высококалорийный</label>
+  
+            <input type="radio" name="lunch_calories" value="Low" id="lunch-calories-low">
+            <label for="lunch-calories-low">Низкокалорийный</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="lunch_home_cooked">Вы обычно едите домашнюю еду или обедаете вне дома?</label>
+        <div class="radio-group">
+            <input type="radio" name="lunch_home_cooked" value="Home_cooked" id="lunch-home-cooked">
+            <label for="lunch-home-cooked">Домашняя еда</label>
+  
+            <input type="radio" name="lunch_home_cooked" value="Eat_out" id="lunch-eat-out">
+            <label for="lunch-eat-out">Еда вне дома</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="salt_intake">Как бы вы оценили ваше потребление соли?</label>
+        <div class="radio-group">
+            <input type="radio" name="salt_intake" value="Low" id="salt-intake-low">
+            <label for="salt-intake-low">Низкое</label>
+  
+            <input type="radio" name="salt_intake" value="Moderate" id="salt-intake-moderate">
+            <label for="salt-intake-moderate">Умеренное</label>
+  
+            <input type="radio" name="salt_intake" value="High" id="salt-intake-high">
+            <label for="salt-intake-high">Высокое</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="diet_preference">Какой у вас предпочтение в диете?</label>
+        <div class="radio-group">
+            <input type="radio" name="diet_preference" value="Regular" id="diet-preference-regular">
+            <label for="diet-preference-regular">Обычная Диета</label>
+  
+            <input type="radio" name="diet_preference" value="Vegetarian" id="diet-preference-vegetarian">
+            <label for="diet-preference-vegetarian">Вегетарианская</label>
+  
+            <input type="radio" name="diet_preference" value="Vegan" id="diet-preference-vegan">
+            <label for="diet-preference-vegan">Веганская</label>
+  
+            <input type="radio" name="diet_preference" value="Other" id="diet-preference-other">
+            <label for="diet-preference-other">Другое</label>
+        </div>
+    </div>
+  </fieldset>
+  
+  <!-- Традиционная Диета и Образ Жизни -->
+  <fieldset>
+    <legend>Традиционная Диета & Образ Жизни</legend>
+    <div class="form-group">
+        <label>Как часто вы потребляете традиционные узбекские блюда?</label>
+        <div class="radio-group">
+            <input type="radio" name="traditional_food" value="Daily" id="traditional-food-daily">
+            <label for="traditional-food-daily">Ежедневно</label>
+            <input type="radio" name="traditional_food" value="Weekly" id="traditional-food-weekly">
+            <label for="traditional-food-weekly">Еженедельно</label>
+            <input type="radio" name="traditional_food" value="Rarely" id="traditional-food-rarely">
+            <label for="traditional-food-rarely">Реже</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Как часто вы едите плов?</label>
+        <div class="radio-group">
+            <input type="radio" name="plov_consumption" value="Multiple_times_week" id="plov-multiple">
+            <label for="plov-multiple">Несколько раз в неделю</label>
+            <input type="radio" name="plov_consumption" value="Once_week" id="plov-once">
+            <label for="plov-once">Раз в неделю</label>
+            <input type="radio" name="plov_consumption" value="Rarely" id="plov-rarely">
+            <label for="plov-rarely">Редко</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Вы регулярно пьете зеленый чай?</label>
+        <div class="radio-group">
+            <input type="radio" name="green_tea" value="Multiple_daily" id="green-tea-multiple">
+            <label for="green-tea-multiple">Несколько раз в день</label>
+            <input type="radio" name="green_tea" value="Once_daily" id="green-tea-once">
+            <label for="green-tea-once">Раз в день</label>
+            <input type="radio" name="green_tea" value="Rarely" id="green-tea-rarely">
+            <label for="green-tea-rarely">Редко</label>
+        </div>
+    </div>
+  </fieldset>
+  
+  <!-- Сон и Восстановление -->
+  <fieldset>
+    <legend>Сон и Восстановление</legend>
+    <div class="form-group">
+        <label>Как бы вы оценили качество вашего сна?</label>
+        <div class="radio-group">
+            <input type="radio" name="sleep_quality" value="Poor" id="sleep-poor">
+            <label for="sleep-poor">Плохо</label>
+            <input type="radio" name="sleep_quality" value="Average" id="sleep-average">
+            <label for="sleep-average">Средне</label>
+            <input type="radio" name="sleep_quality" value="Good" id="sleep-good">
+            <label for="sleep-good">Хорошо</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>У вас бывают проблемы с засыпанием или сном?</label>
+        <div class="radio-group">
+            <input type="radio" name="sleep_trouble" value="Never" id="sleep-trouble-never">
+            <label for="sleep-trouble-never">Никогда</label>
+            <input type="radio" name="sleep_trouble" value="Sometimes" id="sleep-trouble-sometimes">
+            <label for="sleep-trouble-sometimes">Иногда</label>
+            <input type="radio" name="sleep_trouble" value="Often" id="sleep-trouble-often">
+            <label for="sleep-trouble-often">Часто</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Вам был поставлен диагноз апноэ сна?</label>
+        <div class="radio-group">
+            <input type="radio" name="sleep_apnea" value="Yes" id="sleep-apnea-yes">
+            <label for="sleep-apnea-yes">Да</label>
+            <input type="radio" name="sleep_apnea" value="No" id="sleep-apnea-no">
+            <label for="sleep-apnea-no">Нет</label>
+        </div>
+    </div>
+  </fieldset>
+  
+  <!-- Психическое здоровье и Стресс -->
+  <fieldset>
+    <legend>Психическое здоровье и Стресс</legend>
+    <div class="form-group">
+        <label>Как часто вы чувствуете стресс?</label>
+        <div class="radio-group">
+            <input type="radio" name="stress_level" value="Never" id="stress-never">
+            <label for="stress-never">Никогда</label>
+            <input type="radio" name="stress_level" value="Sometimes" id="stress-sometimes">
+            <label for="stress-sometimes">Иногда</label>
+            <input type="radio" name="stress_level" value="Often" id="stress-often">
+            <label for="stress-often">Часто</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Вы страдаете от тревожности или депрессии?</label>
+        <div class="radio-group">
+            <input type="radio" name="mental_health" value="Yes" id="mental-health-yes">
+            <label for="mental-health-yes">Да</label>
+            <input type="radio" name="mental_health" value="No" id="mental-health-no">
+            <label for="mental-health-no">Нет</label>
+            <input type="radio" name="mental_health" value="Sometimes" id="mental-health-sometimes">
+            <label for="mental-health-sometimes">Иногда</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Как часто вы злитесь?</label>
+        <div class="radio-group">
+            <input type="radio" name="anger_level" value="Never" id="anger-never">
+            <label for="anger-never">Никогда</label>
+            <input type="radio" name="anger_level" value="Occasionally" id="anger-occasionally">
+            <label for="anger-occasionally">Иногда</label>
+            <input type="radio" name="anger_level" value="Frequently" id="anger-frequently">
+            <label for="anger-frequently">Часто</label>
+            <input type="radio" name="anger_level" value="Always" id="anger-always">
+            <label for="anger-always">Всегда</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Как бы вы оценили ваш баланс между работой и личной жизнью?</label>
+        <div class="radio-group">
+            <input type="radio" name="work_life_balance" value="Poor" id="work-life-poor">
+            <label for="work-life-poor">Плохо</label>
+            <input type="radio" name="work_life_balance" value="Average" id="work-life-average">
+            <label for="work-life-average">Средне</label>
+            <input type="radio" name="work_life_balance" value="Good" id="work-life-good">
+            <label for="work-life-good">Хорошо</label>
+        </div>
+    </div>
+  </fieldset>
+<!-- Environmental Factors -->
+<fieldset>
+    <legend>Экологические факторы</legend>
+    <div class="form-group">
+        <label>Как вы обычно справляетесь с летней жарой в Самарканде?</label>
+        <div class="radio-group">
+            <input type="radio" name="heat_management" value="Stay_indoors" id="heat-indoor">
+            <label for="heat-indoor">Оставаться дома с кондиционером</label>
+            <input type="radio" name="heat_management" value="Traditional_methods" id="heat-traditional">
+            <label for="heat-traditional">Традиционные методы охлаждения</label>
+            <input type="radio" name="heat_management" value="Both" id="heat-both">
+            <label for="heat-both">Оба</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Испытываете ли вы проблемы с дыханием во время песчаных бурь?</label>
+        <div class="radio-group">
+            <input type="radio" name="dust_storms" value="Often" id="dust-often">
+            <label for="dust-often">Часто</label>
+            <input type="radio" name="dust_storms" value="Sometimes" id="dust-sometimes">
+            <label for="dust-sometimes">Иногда</label>
+            <input type="radio" name="dust_storms" value="Never" id="dust-never">
+            <label for="dust-never">Никогда</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Живете ли вы в районе с высоким уровнем загрязнения воздуха?</label>
+        <div class="radio-group">
+            <input type="radio" name="air_pollution" value="Yes" id="air-pollution-yes">
+            <label for="air-pollution-yes">Да</label>
+            <input type="radio" name="air_pollution" value="No" id="air-pollution-no">
+            <label for="air-pollution-no">Нет</label>
+        </div>
+    </div>
+  </fieldset>
+  <!-- Physical Activity -->
+  <fieldset>
+    <legend>Физическая активность</legend>
+    <div class="form-group">
+        <label>Как часто вы занимаетесь физическими упражнениями?</label>
+        <div class="radio-group">
+            <input type="radio" name="exercise_frequency" value="Daily" id="exercise-daily">
+            <label for="exercise-daily">Ежедневно</label>
+            <input type="radio" name="exercise_frequency" value="Several_times_week" id="exercise-several-week">
+            <label for="exercise-several-week">Несколько раз в неделю</label>
+            <input type="radio" name="exercise_frequency" value="Once_week" id="exercise-once-week">
+            <label for="exercise-once-week">Раз в неделю</label>
+            <input type="radio" name="exercise_frequency" value="Rarely" id="exercise-rarely">
+            <label for="exercise-rarely">Реже</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Какие упражнения вы обычно выполняете?</label>
+        <div class="radio-group">
+            <input type="radio" name="exercise_type" value="Cardio" id="exercise-cardio">
+            <label for="exercise-cardio">Кардио</label>
+            <input type="radio" name="exercise_type" value="Strength_Training" id="exercise-strength-training">
+            <label for="exercise-strength-training">Силовые тренировки</label>
+            <input type="radio" name="exercise_type" value="Yoga" id="exercise-yoga">
+            <label for="exercise-yoga">Йога</label>
+            <input type="radio" name="exercise_type" value="Other" id="exercise-other">
+            <label for="exercise-other">Другое</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Как долго вы обычно занимаетесь упражнениями за один сеанс?</label>
+        <div class="radio-group">
+            <input type="radio" name="exercise_duration" value="Under_30_minutes" id="exercise-under-30">
+            <label for="exercise-under-30">Менее 30 минут</label>
+            <input type="radio" name="exercise_duration" value="30_60_minutes" id="exercise-30-60">
+            <label for="exercise-30-60">30-60 минут</label>
+            <input type="radio" name="exercise_duration" value="Over_60_minutes" id="exercise-over-60">
+            <label for="exercise-over-60">Более 60 минут</label>
+        </div>
+    </div>
+  </fieldset>
+  
+  <!-- Smoking and Alcohol Consumption -->
+  <fieldset>
+    <legend>Курение и потребление алкоголя</legend>
+    <div class="form-group">
+        <label>Вы курите?</label>
+        <div class="radio-group">
+            <input type="radio" name="smoking" value="Yes" id="smoking-yes">
+            <label for="smoking-yes">Да</label>
+            <input type="radio" name="smoking" value="No" id="smoking-no">
+            <label for="smoking-no">Нет</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Если да, сколько сигарет вы курите в день?</label>
+        <div class="radio-group">
+            <input type="radio" name="cigarettes_per_day" value="1_5" id="cigarettes-1-5">
+            <label for="cigarettes-1-5">1-5</label>
+            <input type="radio" name="cigarettes_per_day" value="6_10" id="cigarettes-6-10">
+            <label for="cigarettes-6-10">6-10</label>
+            <input type="radio" name="cigarettes_per_day" value="11_20" id="cigarettes-11-20">
+            <label for="cigarettes-11-20">11-20</label>
+            <input type="radio" name="cigarettes_per_day" value="Over_20" id="cigarettes-over-20">
+            <label for="cigarettes-over-20">Более 20</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Вы потребляете алкоголь?</label>
+        <div class="radio-group">
+            <input type="radio" name="alcohol_consumption" value="Yes" id="alcohol-yes">
+            <label for="alcohol-yes">Да</label>
+            <input type="radio" name="alcohol_consumption" value="No" id="alcohol-no">
+            <label for="alcohol-no">Нет</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Если да, как часто вы пьете?</label>
+        <div class="radio-group">
+            <input type="radio" name="alcohol_frequency" value="Daily" id="alcohol-daily">
+            <label for="alcohol-daily">Ежедневно</label>
+            <input type="radio" name="alcohol_frequency" value="Weekly" id="alcohol-weekly">
+            <label for="alcohol-weekly">Еженедельно</label>
+            <input type="radio" name="alcohol_frequency" value="Monthly" id="alcohol-monthly">
+            <label for="alcohol-monthly">Ежемесячно</label>
+            <input type="radio" name="alcohol_frequency" value="Rarely" id="alcohol-rarely">
+            <label for="alcohol-rarely">Реже</label>
+        </div>
+    </div>
+  </fieldset>
+  
+  <!-- Medical History -->
+  <fieldset>
+    <legend>Медицинская история</legend>
+    <div class="form-group">
+        <label>Есть ли в вашей семье случаи сердечно-сосудистых заболеваний?</label>
+        <div class="radio-group">
+            <input type="radio" name="family_history_cvd" value="Yes" id="family-history-yes">
+            <label for="family-history-yes">Да</label>
+            <input type="radio" name="family_history_cvd" value="No" id="family-history-no">
+            <label for="family-history-no">Нет</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Были ли у вас диагностированы следующие заболевания?</label>
+        <div class="radio-group">
+            <input type="radio" name="diagnosed_conditions" value="Hypertension" id="hypertension">
+            <label for="hypertension">Гипертония</label>
+            <input type="radio" name="diagnosed_conditions" value="Diabetes" id="diabetes">
+            <label for="diabetes">Диабет</label>
+            <input type="radio" name="diagnosed_conditions" value="Cholesterol" id="cholesterol">
+            <label for="cholesterol">Высокий уровень холестерина</label>
+            <input type="radio" name="diagnosed_conditions" value="Other" id="other-condition">
+            <label for="other-condition">Другое</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Вы принимаете какие-либо лекарства регулярно?</label>
+        <div class="radio-group">
+            <input type="radio" name="regular_medications" value="Yes" id="medications-yes">
+            <label for="medications-yes">Да</label>
+            <input type="radio" name="regular_medications" value="No" id="medications-no">
+            <label for="medications-no">Нет</label>
+        </div>
+    </div>
+  </fieldset>
+  
+  <!-- Lifestyle Changes -->
+  <fieldset>
+    <legend>Изменения в образе жизни</legend>
+    <div class="form-group">
+        <label>Вы в настоящее время пытаетесь улучшить свой образ жизни для лучшего здоровья?</label>
+        <div class="radio-group">
+            <input type="radio" name="lifestyle_improvement" value="Yes" id="lifestyle-yes">
+            <label for="lifestyle-yes">Да</label>
+            <input type="radio" name="lifestyle_improvement" value="No" id="lifestyle-no">
+            <label for="lifestyle-no">Нет</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Если да, какие действия вы предприняли?</label>
+        <div class="radio-group">
+            <input type="radio" name="lifestyle_actions" value="Exercise" id="lifestyle-exercise">
+            <label for="lifestyle-exercise">Физические упражнения</label>
+            <input type="radio" name="lifestyle_actions" value="Diet" id="lifestyle-diet">
+            <label for="lifestyle-diet">Диета</label>
+            <input type="radio" name="lifestyle_actions" value="Sleep" id="lifestyle-sleep">
+            <label for="lifestyle-sleep">Сон</label>
+            <input type="radio" name="lifestyle_actions" value="Stress_management" id="lifestyle-stress">
+            <label for="lifestyle-stress">Управление стрессом</label>
+        </div>
+    </div>
+  </fieldset>
+  
+  <!-- Health Wearables -->
+  <fieldset>
+    <legend>Устройства для здоровья</legend>
+    <div class="form-group">
+        <label>Вы в настоящее время используете устройства для здоровья (например, умные часы, фитнес-трекер)?</label>
+        <div class="radio-group">
+            <input type="radio" name="health_wearable" value="Yes" id="wearable-yes">
+            <label for="wearable-yes">Да</label>
+            <input type="radio" name="health_wearable" value="No" id="wearable-no">
+            <label for="wearable-no">Нет</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Если да, какой тип устройства вы используете?</label>
+        <div class="radio-group">
+            <input type="radio" name="wearable_type" value="Smartwatch" id="wearable-smartwatch">
+            <label for="wearable-smartwatch">Умные часы</label>
+            <input type="radio" name="wearable_type" value="Fitness_Tracker" id="wearable-fitness-tracker">
+            <label for="wearable-fitness-tracker">Фитнес-трекер</label>
+            <input type="radio" name="wearable_type" value="Other" id="wearable-other">
+            <label for="wearable-other">Другое</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Как часто вы используете ваше устройство для здоровья?</label>
+        <div class="radio-group">
+            <input type="radio" name="wearable_usage_frequency" value="Daily" id="wearable-daily">
+            <label for="wearable-daily">Ежедневно</label>
+            <input type="radio" name="wearable_usage_frequency" value="Several_times_week" id="wearable-several-week">
+            <label for="wearable-several-week">Несколько раз в неделю</label>
+            <input type="radio" name="wearable_usage_frequency" value="Rarely" id="wearable-rarely">
+            <label for="wearable-rarely">Редко</label>
+            <input type="radio" name="wearable_usage_frequency" value="Never" id="wearable-never">
+            <label for="wearable-never">Никогда</label>
+        </div>
+    </div>
+  </fieldset>
+  
+  <!-- Sleep and Rest -->
+  <fieldset>
+    <legend>Сон и отдых</legend>
+    <div class="form-group">
+        <label>Сколько часов сна вы обычно получаете каждую ночь?</label>
+        <div class="radio-group">
+            <input type="radio" name="sleep_hours" value="Less_than_5" id="sleep-less-5">
+            <label for="sleep-less-5">Менее 5 часов</label>
+            <input type="radio" name="sleep_hours" value="5_7_hours" id="sleep-5-7">
+            <label for="sleep-5-7">5-7 часов</label>
+            <input type="radio" name="sleep_hours" value="8_10_hours" id="sleep-8-10">
+            <label for="sleep-8-10">8-10 часов</label>
+            <input type="radio" name="sleep_hours" value="More_than_10" id="sleep-more-10">
+            <label for="sleep-more-10">Более 10 часов</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Чувствуете ли вы себя отдохнувшим после ночного сна?</label>
+        <div class="radio-group">
+            <input type="radio" name="feeling_restful" value="Yes" id="restful-yes">
+            <label for="restful-yes">Да</label>
+            <input type="radio" name="feeling_restful" value="No" id="restful-no">
+            <label for="restful-no">Нет</label>
+        </div>
+    </div>
+  </fieldset>
+<!-- Уровни стресса -->
+<fieldset>
+    <legend>Уровни стресса</legend>
+    <div class="form-group">
+        <label>Как часто вы испытываете стресс в своей повседневной жизни?</label>
+        <div class="radio-group">
+            <input type="radio" name="stress_level" value="Always" id="stress-always">
+            <label for="stress-always">Всегда</label>
+            <input type="radio" name="stress_level" value="Frequently" id="stress-frequently">
+            <label for="stress-frequently">Часто</label>
+            <input type="radio" name="stress_level" value="Sometimes" id="stress-sometimes">
+            <label for="stress-sometimes">Иногда</label>
+            <input type="radio" name="stress_level" value="Rarely" id="stress-rarely">
+            <label for="stress-rarely">Редко</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Как вы обычно справляетесь со стрессом?</label>
+        <div class="radio-group">
+            <input type="radio" name="stress_coping" value="Exercise" id="stress-exercise">
+            <label for="stress-exercise">Физические упражнения</label>
+            <input type="radio" name="stress_coping" value="Meditation" id="stress-meditation">
+            <label for="stress-meditation">Медитация</label>
+            <input type="radio" name="stress_coping" value="Talking_to_others" id="stress-talking">
+            <label for="stress-talking">Разговоры с другими</label>
+            <input type="radio" name="stress_coping" value="Avoidance" id="stress-avoidance">
+            <label for="stress-avoidance">Избежание</label>
+        </div>
+    </div>
+  </fieldset>
+  
+  <!-- Кнопка отправки -->
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary">Отправить</button>
+  </div>
+      

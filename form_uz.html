@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Samarkand Yurak Kasalliklari Riskini Baholash</title>
+    
+</head>
+<video autoplay muted loop class="video-background">
+  <source src="bg.mp4" type="video/mp4">
+</video>
+<body>
+    <div class="container">
+        <h1>Yurak Kasalliklari Riski So'rovi</h1>
+        <form action="https://script.google.com/macros/s/AKfycbzn-oquzZRWToTHTk60VY-uTiymathP86RLCkVrcUAOwQLmUTE3i03h2SHq8c5B2MHuyg/exec" method="POST">
+            <!-- Demografik ma'lumotlar -->
+            <fieldset>
+                <legend>Demografik & Madaniy Fon</legend>
+                <div class="form-group">
+                  <label>Yosh Guruhi</label>
+                  <div class="radio-group">
+                      <input type="radio" name="age_group" value="18-30" id="age-18-30">
+                      <label for="age-18-30">18-30 yosh</label>
+                      
+                      <input type="radio" name="age_group" value="31-45" id="age-31-45">
+                      <label for="age-31-45">31-45 yosh</label>
+                      
+                      <input type="radio" name="age_group" value="46-60" id="age-46-60">
+                      <label for="age-46-60">46-60 yosh</label>
+                      
+                      <input type="radio" name="age_group" value="61-75" id="age-61-75">
+                      <label for="age-61-75">61-75 yosh</label>
+                      
+                      <input type="radio" name="age_group" value="above-75" id="age-above-75">
+                      <label for="age-above-75">75 yoshdan yuqori</label>
+                  </div>
+              </div>
+                <div class="form-group">
+                    <label>Jins</label>
+                    <div class="radio-group">
+                        <input type="radio" name="gender" value="Male" id="male">
+                        <label for="male">Erkak</label>
+                        <input type="radio" name="gender" value="Female" id="female">
+                        <label for="female">Ayol</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                  <label>Milliy Yozilish</label>
+                  <div class="radio-group">
+                      <input type="radio" name="ethnicity" value="Uzbek" id="ethnicity-uzbek">
+                      <label for="ethnicity-uzbek">O'zbek</label>
+                      
+                      <input type="radio" name="ethnicity" value="Tajik" id="ethnicity-tajik">
+                      <label for="ethnicity-tajik">Tojik</label>
+                      
+                      <input type="radio" name="ethnicity" value="Russian" id="ethnicity-russian">
+                      <label for="ethnicity-russian">Rus</label>
+                      
+                      <input type="radio" name="ethnicity" value="Other" id="ethnicity-other">
+                      <label for="ethnicity-other">Boshqa</label>
+                  </div>
+              </div>
+              
+              <div class="form-group">
+                <label>Jamiyat tadbirlariga yoki bayramlarga muntazam qatnashasizmi?</label>
+                <div class="radio-group">
+                    <input type="radio" name="community_gatherings" value="Often" id="community-gatherings-often">
+                    <label for="community-gatherings-often">Tez-tez</label>
+            
+                    <input type="radio" name="community_gatherings" value="Sometimes" id="community-gatherings-sometimes">
+                    <label for="community-gatherings-sometimes">Ba'zida</label>
+            
+                    <input type="radio" name="community_gatherings" value="Rarely" id="community-gatherings-rarely">
+                    <label for="community-gatherings-rarely">Kamdan-kam</label>
+                </div>
+            </div>
+            </fieldset>
+            
+            <!-- Asosiy tibbiy xavf omillari -->
+            <fieldset>
+                <legend>Asosiy Tibbiy Xavf Omillari</legend>
+                
+                <div class="form-group">
+                    <label for="diabetes">Sizda shakar kasalligi bormi?</label>
+                    <div class="radio-group">
+                        <input type="radio" name="diabetes" value="Yes" id="diabetes-yes">
+                        <label for="diabetes-yes">Ha</label>
+            
+                        <input type="radio" name="diabetes" value="No" id="diabetes-no">
+                        <label for="diabetes-no">Yo'q</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="high_cholesterol">Sizda yuqori xolesterin bormi?</label>
+                    <div class="radio-group">
+                        <input type="radio" name="high_cholesterol" value="Yes" id="high-cholesterol-yes">
+                        <label for="high-cholesterol-yes">Ha</label>
+            
+                        <input type="radio" name="high_cholesterol" value="No" id="high-cholesterol-no">
+                        <label for="high-cholesterol-no">Yo'q</label>
+                    </div>
+                </div>
+            
+                <div class="form-group">
+                    <label for="bp_check">So'nggi bir yil ichida qon bosimingizni tekshirdirdingizmi?</label>
+                    <div class="radio-group">
+                        <input type="radio" name="bp_check" value="Yes" id="bp-check-yes">
+                        <label for="bp-check-yes">Ha</label>
+            
+                        <input type="radio" name="bp_check" value="No" id="bp-check-no">
+                        <label for="bp-check-no">Yo'q</label>
+                    </div>
+                </div>
+            
+                <div class="form-group">
+                    <label for="genetic_disorder">Sizda genetik kasallik bormi?</label>
+                    <div class="radio-group">
+                        <input type="radio" name="genetic_disorder" value="Yes" id="genetic-disorder-yes">
+                        <label for="genetic-disorder-yes">Ha</label>
+            
+                        <input type="radio" name="genetic_disorder" value="No" id="genetic-disorder-no">
+                        <label for="genetic-disorder-no">Yo'q</label>
+                    </div>
+                </div>
+            </fieldset>
+            
+           <!-- Oila tarixchasi -->
+            <fieldset>
+             <legend>Oila Tarixi</legend>
+              <div class="form-group">
+               <label for="family_history_cvd">Sizning oilangizda yurak kasalliklari tarixi bormi?</label>
+               <div class="radio-group">
+                 <input type="radio" name="family_history_cvd" value="Yes" id="family-history-cvd-yes">
+             <label for="family-history-cvd-yes">Ha</label>
+
+               <input type="radio" name="family_history_cvd" value="No" id="family-history-cvd-no">
+            <label for="family-history-cvd-no">Yo'q</label>
+      </div>
+  </div>
+  <div class="form-group">
+      <label for="family_genetic_disorder">Sizning oilangizda genetik kasalliklar bormi?</label>
+      <div class="radio-group">
+          <input type="radio" name="family_genetic_disorder" value="Yes" id="family-genetic-disorder-yes">
+          <label for="family-genetic-disorder-yes">Ha</label>
+
+          <input type="radio" name="family_genetic_disorder" value="No" id="family-genetic-disorder-no">
+          <label for="family-genetic-disorder-no">Yo'q</label>
+      </div>
+  </div>
+</fieldset>
+
+<!-- Hayot tarzi xavf omillari -->
+<fieldset>
+  <legend>Hayot Tarzi Xavf Omillari</legend>
+  <div class="form-group">
+      <label for="smoking">Sigaret chekasizmi?</label>
+      <div class="radio-group">
+          <input type="radio" name="smoking" value="Yes" id="smoking-yes">
+          <label for="smoking-yes">Ha</label>
+
+          <input type="radio" name="smoking" value="No" id="smoking-no">
+          <label for="smoking-no">Yo'q</label>
+      </div>
+  </div>
+  <div class="form-group">
+      <label for="alcohol">Spirtli ichimliklar iste'mol qilasizmi?</label>
+      <div class="radio-group">
+          <input type="radio" name="alcohol" value="Yes" id="alcohol-yes">
+          <label for="alcohol-yes">Ha</label>
+
+          <input type="radio" name="alcohol" value="No" id="alcohol-no">
+          <label for="alcohol-no">Yo'q</label>
+      </div>
+  </div>
+  <div class="form-group">
+      <label for="beverages">Siz necha marta gazli ichimliklar yoki ichimliklar iste'mol qilasiz?</label>
+      <div class="radio-group">
+          <input type="radio" name="beverages" value="Once_a_day" id="beverages-once-a-day">
+          <label for="beverages-once-a-day">Kuniga bir marta</label>
+
+          <input type="radio" name="beverages" value="2_3_times_a_day" id="beverages-2-3-times-a-day">
+          <label for="beverages-2-3-times-a-day">Kuniga 2-3 marta</label>
+
+          <input type="radio" name="beverages" value="Regularly" id="beverages-regularly">
+          <label for="beverages-regularly">Doimiy ravishda</label>
+
+          <input type="radio" name="beverages" value="Never" id="beverages-never">
+          <label for="beverages-never">Hech qachon</label>
+      </div>
+  </div>
+</fieldset>
+
+<!-- Jismoniy faollik -->
+<fieldset>
+  <legend>Jismoniy Faollik</legend>
+  <div class="form-group">
+      <label for="exercise_intensity">Jismoniy faolligingizning intensivligi qanday?</label>
+      <div class="radio-group">
+          <input type="radio" name="exercise_intensity" value="Mild" id="exercise-intensity-mild">
+          <label for="exercise-intensity-mild">Yengil</label>
+
+          <input type="radio" name="exercise_intensity" value="Moderate" id="exercise-intensity-moderate">
+          <label for="exercise-intensity-moderate">O'rtacha</label>
+
+          <input type="radio" name="exercise_intensity" value="Vigorous" id="exercise-intensity-vigorous">
+          <label for="exercise-intensity-vigorous">Qattiq</label>
+      </div>
+  </div>
+  <div class="form-group">
+      <label for="exercise_type">Asosan qaysi turdagi mashqlarni bajarasiz?</label>
+      <div class="radio-group">
+          <input type="radio" name="exercise_type" value="Walking" id="exercise-type-walking">
+          <label for="exercise-type-walking">Yurish</label>
+
+          <input type="radio" name="exercise_type" value="Jogging" id="exercise-type-jogging">
+          <label for="exercise-type-jogging">Yugurish</label>
+
+          <input type="radio" name="exercise_type" value="Strength" id="exercise-type-strength">
+          <label for="exercise-type-strength">Kuch mashqlari</label>
+
+          <input type="radio" name="exercise_type" value="Yoga" id="exercise-type-yoga">
+          <label for="exercise-type-yoga">Yoga</label>
+      </div>
+  </div>
+  <div class="form-group">
+      <label for="exercise_duration">Bir mashg'ulotda qancha vaqt mashq qilasiz?</label>
+      <div class="radio-group">
+          <input type="radio" name="exercise_duration" value="Less30" id="exercise-duration-less30">
+          <label for="exercise-duration-less30">30 minutdan kam</label>
+
+          <input type="radio" name="exercise_duration" value="30-60" id="exercise-duration-30-60">
+          <label for="exercise-duration-30-60">30-60 minut</label>
+
+          <input type="radio" name="exercise_duration" value="More60" id="exercise-duration-more60">
+          <label for="exercise-duration-more60">60 minutdan ko'proq</label>
+      </div>
+  </div>
+</fieldset>
+
+<!-- Dieta odatlari -->
+<fieldset>
+    <legend>Dieta odatlari</legend>
+    <div class="form-group">
+        <label for="breakfast">Siz odatda nima iste'mol qilasiz?</label>
+        <div class="radio-group">
+            <input type="radio" name="breakfast" value="Complete" id="breakfast-complete">
+            <label for="breakfast-complete">To'liq nonushta</label>
+  
+            <input type="radio" name="breakfast" value="Tea_or_Coffee" id="breakfast-tea-or-coffee">
+            <label for="breakfast-tea-or-coffee">Choy yoki kofe</label>
+  
+            <input type="radio" name="breakfast" value="Skip" id="breakfast-skip">
+            <label for="breakfast-skip">Tushlikni o'tkazib yuborish</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="lunch_calories">Tushlikni qanday baholaysiz?</label>
+        <div class="radio-group">
+            <input type="radio" name="lunch_calories" value="High" id="lunch-calories-high">
+            <label for="lunch-calories-high">Kaloriyalarga boy</label>
+  
+            <input type="radio" name="lunch_calories" value="Low" id="lunch-calories-low">
+            <label for="lunch-calories-low">Kam kaloriyali</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="lunch_home_cooked">Siz odatda uyda tayyorlangan ovqatlarni yeysizmi yoki tashqarida ovqatlanasizmi?</label>
+        <div class="radio-group">
+            <input type="radio" name="lunch_home_cooked" value="Home_cooked" id="lunch-home-cooked">
+            <label for="lunch-home-cooked">Uyda tayyorlangan</label>
+  
+            <input type="radio" name="lunch_home_cooked" value="Eat_out" id="lunch-eat-out">
+            <label for="lunch-eat-out">Tashqarida ovqatlanish</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="salt_intake">Sizning kunlik tuz iste'mol qilishingizni qanday baholaysiz?</label>
+        <div class="radio-group">
+            <input type="radio" name="salt_intake" value="Low" id="salt-intake-low">
+            <label for="salt-intake-low">Kam</label>
+  
+            <input type="radio" name="salt_intake" value="Moderate" id="salt-intake-moderate">
+            <label for="salt-intake-moderate">O'rtacha</label>
+  
+            <input type="radio" name="salt_intake" value="High" id="salt-intake-high">
+            <label for="salt-intake-high">Yuqori</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="diet_preference">Sizning ovqatlanish xohishingiz qanday?</label>
+        <div class="radio-group">
+            <input type="radio" name="diet_preference" value="Regular" id="diet-preference-regular">
+            <label for="diet-preference-regular">Oddiy dieta</label>
+  
+            <input type="radio" name="diet_preference" value="Vegetarian" id="diet-preference-vegetarian">
+            <label for="diet-preference-vegetarian">Vegetarian</label>
+  
+            <input type="radio" name="diet_preference" value="Vegan" id="diet-preference-vegan">
+            <label for="diet-preference-vegan">Vegan</label>
+  
+            <input type="radio" name="diet_preference" value="Other" id="diet-preference-other">
+            <label for="diet-preference-other">Boshqa</label>
+        </div>
+    </div>
+  </fieldset>
+  <!-- An'anaviy dieta va turmush tarziga oid -->
+  <fieldset>
+    <legend>An'anaviy dieta va turmush tarzi</legend>
+    <div class="form-group">
+        <label>An'anaviy o'zbek taomlarini qancha tez-tez iste'mol qilasiz?</label>
+        <div class="radio-group">
+            <input type="radio" name="traditional_food" value="Daily" id="traditional-food-daily">
+            <label for="traditional-food-daily">Har kuni</label>
+            <input type="radio" name="traditional_food" value="Weekly" id="traditional-food-weekly">
+            <label for="traditional-food-weekly">Haftada bir marta</label>
+            <input type="radio" name="traditional_food" value="Rarely" id="traditional-food-rarely">
+            <label for="traditional-food-rarely">Kamdan-kam</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Plovni qancha tez-tez iste'mol qilasiz?</label>
+        <div class="radio-group">
+            <input type="radio" name="plov_consumption" value="Multiple_times_week" id="plov-multiple">
+            <label for="plov-multiple">Haftada bir necha marta</label>
+            <input type="radio" name="plov_consumption" value="Once_week" id="plov-once">
+            <label for="plov-once">Haftada bir marta</label>
+            <input type="radio" name="plov_consumption" value="Rarely" id="plov-rarely">
+            <label for="plov-rarely">Kamdan-kam</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Yashil choyni muntazam ichasizmi?</label>
+        <div class="radio-group">
+            <input type="radio" name="green_tea" value="Multiple_daily" id="green-tea-multiple">
+            <label for="green-tea-multiple">Kuniga bir necha marta</label>
+            <input type="radio" name="green_tea" value="Once_daily" id="green-tea-once">
+            <label for="green-tea-once">Kuniga bir marta</label>
+            <input type="radio" name="green_tea" value="Rarely" id="green-tea-rarely">
+            <label for="green-tea-rarely">Kamdan-kam</label>
+        </div>
+    </div>
+  </fieldset>
+  
+  <!-- Uxlash va tiklanish -->
+  <fieldset>
+    <legend>Uxlash va tiklanish</legend>
+    <div class="form-group">
+        <label>Uxlash sifatingizni qanday baholaysiz?</label>
+        <div class="radio-group">
+            <input type="radio" name="sleep_quality" value="Poor" id="sleep-poor">
+            <label for="sleep-poor">Yomon</label>
+            <input type="radio" name="sleep_quality" value="Average" id="sleep-average">
+            <label for="sleep-average">O'rtacha</label>
+            <input type="radio" name="sleep_quality" value="Good" id="sleep-good">
+            <label for="sleep-good">Yaxshi</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Uxlashda yoki uxlayotganda qiyinchilik sezarmidingiz?</label>
+        <div class="radio-group">
+            <input type="radio" name="sleep_trouble" value="Never" id="sleep-trouble-never">
+            <label for="sleep-trouble-never">Hech qachon</label>
+            <input type="radio" name="sleep_trouble" value="Sometimes" id="sleep-trouble-sometimes">
+            <label for="sleep-trouble-sometimes">Ba'zan</label>
+            <input type="radio" name="sleep_trouble" value="Often" id="sleep-trouble-often">
+            <label for="sleep-trouble-often">Tez-tez</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Uyqu apnesi tashxisi qo'yilganmi?</label>
+        <div class="radio-group">
+            <input type="radio" name="sleep_apnea" value="Yes" id="sleep-apnea-yes">
+            <label for="sleep-apnea-yes">Ha</label>
+            <input type="radio" name="sleep_apnea" value="No" id="sleep-apnea-no">
+            <label for="sleep-apnea-no">Yo'q</label>
+        </div>
+    </div>
+  </fieldset>
+  
+  <!-- Ruhiy salomatlik va stress -->
+  <fieldset>
+    <legend>Ruhiy salomatlik va stress</legend>
+    <div class="form-group">
+        <label>Qancha tez-tez stress his qilasiz?</label>
+        <div class="radio-group">
+            <input type="radio" name="stress_level" value="Never" id="stress-never">
+            <label for="stress-never">Hech qachon</label>
+            <input type="radio" name="stress_level" value="Sometimes" id="stress-sometimes">
+            <label for="stress-sometimes">Ba'zan</label>
+            <input type="radio" name="stress_level" value="Often" id="stress-often">
+            <label for="stress-often">Tez-tez</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Depressiya yoki tashvishdan aziyat chekmoqdamisiz?</label>
+        <div class="radio-group">
+            <input type="radio" name="mental_health" value="Yes" id="mental-health-yes">
+            <label for="mental-health-yes">Ha</label>
+            <input type="radio" name="mental_health" value="No" id="mental-health-no">
+            <label for="mental-health-no">Yo'q</label>
+            <input type="radio" name="mental_health" value="Sometimes" id="mental-health-sometimes">
+            <label for="mental-health-sometimes">Ba'zan</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Qancha tez-tez g'azablanasiz?</label>
+        <div class="radio-group">
+            <input type="radio" name="anger_level" value="Never" id="anger-never">
+            <label for="anger-never">Hech qachon</label>
+            <input type="radio" name="anger_level" value="Occasionally" id="anger-occasionally">
+            <label for="anger-occasionally">Ba'zan</label>
+            <input type="radio" name="anger_level" value="Frequently" id="anger-frequently">
+            <label for="anger-frequently">Tez-tez</label>
+            <input type="radio" name="anger_level" value="Always" id="anger-always">
+            <label for="anger-always">Har doim</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Ish va hayot balansini qanday baholaysiz?</label>
+        <div class="radio-group">
+            <input type="radio" name="work_life_balance" value="Poor" id="work-life-poor">
+            <label for="work-life-poor">Yomon</label>
+            <input type="radio" name="work_life_balance" value="Average" id="work-life-average">
+            <label for="work-life-average">O'rtacha</label>
+            <input type="radio" name="work_life_balance" value="Good" id="work-life-good">
+            <label for="work-life-good">Yaxshi</label>
+        </div>
+    </div>
+  </fieldset>
+
+  <!-- Atrof-muhit omillari -->
+<fieldset>
+    <legend>Atrof-muhit omillari</legend>
+    <div class="form-group">
+        <label>Samarkandning yozgi issiqligi bilan qanday kurashasiz?</label>
+        <div class="radio-group">
+            <input type="radio" name="heat_management" value="Stay_indoors" id="heat-indoor">
+            <label for="heat-indoor">Ichkarida konditsioner bilan qolish</label>
+            <input type="radio" name="heat_management" value="Traditional_methods" id="heat-traditional">
+            <label for="heat-traditional">An'anaviy sovutish usullari</label>
+            <input type="radio" name="heat_management" value="Both" id="heat-both">
+            <label for="heat-both">Ikki usulni ham qo'llash</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Chang to'fonlari paytida nafas olish muammolarini sezganmisiz?</label>
+        <div class="radio-group">
+            <input type="radio" name="dust_storms" value="Often" id="dust-often">
+            <label for="dust-often">Tez-tez</label>
+            <input type="radio" name="dust_storms" value="Sometimes" id="dust-sometimes">
+            <label for="dust-sometimes">Ba'zida</label>
+            <input type="radio" name="dust_storms" value="Never" id="dust-never">
+            <label for="dust-never">Hech qachon</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Havo ifloslanishi yuqori bo'lgan hududda yashaysizmi?</label>
+        <div class="radio-group">
+            <input type="radio" name="air_pollution" value="Yes" id="air-pollution-yes">
+            <label for="air-pollution-yes">Ha</label>
+            <input type="radio" name="air_pollution" value="No" id="air-pollution-no">
+            <label for="air-pollution-no">Yo'q</label>
+        </div>
+    </div>
+  </fieldset>
+  
+  <!-- Jismoniy faoliyat -->
+  <fieldset>
+    <legend>Jismoniy faoliyat</legend>
+    <div class="form-group">
+        <label>Qancha tez-tez jismoniy mashqlar bilan shug'ullanasiz?</label>
+        <div class="radio-group">
+            <input type="radio" name="exercise_frequency" value="Daily" id="exercise-daily">
+            <label for="exercise-daily">Har kuni</label>
+            <input type="radio" name="exercise_frequency" value="Several_times_week" id="exercise-several-week">
+            <label for="exercise-several-week">Haftada bir necha marta</label>
+            <input type="radio" name="exercise_frequency" value="Once_week" id="exercise-once-week">
+            <label for="exercise-once-week">Haftada bir marta</label>
+            <input type="radio" name="exercise_frequency" value="Rarely" id="exercise-rarely">
+            <label for="exercise-rarely">Kamdan-kam</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Qaysi turdagi mashqlarni odatda bajarishga moyilsiz?</label>
+        <div class="radio-group">
+            <input type="radio" name="exercise_type" value="Cardio" id="exercise-cardio">
+            <label for="exercise-cardio">Kardio</label>
+            <input type="radio" name="exercise_type" value="Strength_Training" id="exercise-strength-training">
+            <label for="exercise-strength-training">Kuchli mashqlar</label>
+            <input type="radio" name="exercise_type" value="Yoga" id="exercise-yoga">
+            <label for="exercise-yoga">Yoga</label>
+            <input type="radio" name="exercise_type" value="Other" id="exercise-other">
+            <label for="exercise-other">Boshqa</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Har bir mashq seansida qancha vaqt mashq qilasiz?</label>
+        <div class="radio-group">
+            <input type="radio" name="exercise_duration" value="Under_30_minutes" id="exercise-under-30">
+            <label for="exercise-under-30">30 daqiqadan kam</label>
+            <input type="radio" name="exercise_duration" value="30_60_minutes" id="exercise-30-60">
+            <label for="exercise-30-60">30-60 daqiqa</label>
+            <input type="radio" name="exercise_duration" value="Over_60_minutes" id="exercise-over-60">
+            <label for="exercise-over-60">60 daqiqadan ortiq</label>
+        </div>
+    </div>
+  </fieldset>
+  
+  <!-- Chekish va alkogol iste'moli -->
+  <fieldset>
+    <legend>Chekish va alkogol iste'moli</legend>
+    <div class="form-group">
+        <label>Hozirda chekasizmi?</label>
+        <div class="radio-group">
+            <input type="radio" name="smoking" value="Yes" id="smoking-yes">
+            <label for="smoking-yes">Ha</label>
+            <input type="radio" name="smoking" value="No" id="smoking-no">
+            <label for="smoking-no">Yo'q</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Agar ha bo'lsa, kuniga necha sigaret chekishingizni ayting?</label>
+        <div class="radio-group">
+            <input type="radio" name="cigarettes_per_day" value="1_5" id="cigarettes-1-5">
+            <label for="cigarettes-1-5">1-5</label>
+            <input type="radio" name="cigarettes_per_day" value="6_10" id="cigarettes-6-10">
+            <label for="cigarettes-6-10">6-10</label>
+            <input type="radio" name="cigarettes_per_day" value="11_20" id="cigarettes-11-20">
+            <label for="cigarettes-11-20">11-20</label>
+            <input type="radio" name="cigarettes_per_day" value="Over_20" id="cigarettes-over-20">
+            <label for="cigarettes-over-20">20 dan ortiq</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Alkogol iste'mol qilasizmi?</label>
+        <div class="radio-group">
+            <input type="radio" name="alcohol_consumption" value="Yes" id="alcohol-yes">
+            <label for="alcohol-yes">Ha</label>
+            <input type="radio" name="alcohol_consumption" value="No" id="alcohol-no">
+            <label for="alcohol-no">Yo'q</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Agar ha bo'lsa, qanchalik tez-tez ichasiz?</label>
+        <div class="radio-group">
+            <input type="radio" name="alcohol_frequency" value="Daily" id="alcohol-daily">
+            <label for="alcohol-daily">Har kuni</label>
+            <input type="radio" name="alcohol_frequency" value="Weekly" id="alcohol-weekly">
+            <label for="alcohol-weekly">Haftada bir marta</label>
+            <input type="radio" name="alcohol_frequency" value="Monthly" id="alcohol-monthly">
+            <label for="alcohol-monthly">Oylik</label>
+            <input type="radio" name="alcohol_frequency" value="Rarely" id="alcohol-rarely">
+            <label for="alcohol-rarely">Kamdan-kam</label>
+        </div>
+    </div>
+  </fieldset>
+  
+  <!-- Tibbiy tarix -->
+  <fieldset>
+    <legend>Tibbiy tarix</legend>
+    <div class="form-group">
+        <label>Oilada yurak-qon tomir kasalliklari tarixi bormi?</label>
+        <div class="radio-group">
+            <input type="radio" name="family_history_cvd" value="Yes" id="family-history-yes">
+            <label for="family-history-yes">Ha</label>
+            <input type="radio" name="family_history_cvd" value="No" id="family-history-no">
+            <label for="family-history-no">Yo'q</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Qaysi holatlar bo'yicha tashxis qo'yilgan?</label>
+        <div class="radio-group">
+            <input type="radio" name="diagnosed_conditions" value="Hypertension" id="hypertension">
+            <label for="hypertension">Gipertoniya</label>
+            <input type="radio" name="diagnosed_conditions" value="Diabetes" id="diabetes">
+            <label for="diabetes">Diabetes</label>
+            <input type="radio" name="diagnosed_conditions" value="Cholesterol" id="cholesterol">
+            <label for="cholesterol">Yuqori xolesterin</label>
+            <input type="radio" name="diagnosed_conditions" value="Other" id="other-condition">
+            <label for="other-condition">Boshqa</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Doimiy dori-darmonlar qabul qilasizmi?</label>
+        <div class="radio-group">
+            <input type="radio" name="regular_medications" value="Yes" id="medications-yes">
+            <label for="medications-yes">Ha</label>
+            <input type="radio" name="regular_medications" value="No" id="medications-no">
+            <label for="medications-no">Yo'q</label>
+        </div>
+    </div>
+  </fieldset>
+  
+  <!-- Hayot tarzini o'zgartirish -->
+  <fieldset>
+    <legend>Hayot tarzini o'zgartirish</legend>
+    <div class="form-group">
+        <label>Siz hozirda sog'lik uchun hayot tarzini yaxshilashga harakat qilmoqdamisiz?</label>
+        <div class="radio-group">
+            <input type="radio" name="lifestyle_improvement" value="Yes" id="lifestyle-yes">
+            <label for="lifestyle-yes">Ha</label>
+            <input type="radio" name="lifestyle_improvement" value="No" id="lifestyle-no">
+            <label for="lifestyle-no">Yo'q</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Agar ha bo'lsa, qaysi choralarga ko'rgazdingiz?</label>
+        <div class="radio-group">
+            <input type="radio" name="lifestyle_actions" value="Exercise" id="lifestyle-exercise">
+            <label for="lifestyle-exercise">Mashq qilish</label>
+            <input type="radio" name="lifestyle_actions" value="Diet" id="lifestyle-diet">
+            <label for="lifestyle-diet">Dieta</label>
+            <input type="radio" name="lifestyle_actions" value="Sleep" id="lifestyle-sleep">
+            <label for="lifestyle-sleep">Uxlash</label>
+            <input type="radio" name="lifestyle_actions" value="Stress_management" id="lifestyle-stress">
+            <label for="lifestyle-stress">Stressni boshqarish</label>
+        </div>
+    </div>
+  </fieldset>
+  
+  <!-- Sog'liqni saqlash gadjetlari -->
+  <fieldset>
+    <legend>Sog'liqni saqlash gadjetlari</legend>
+    <div class="form-group">
+        <label>Siz hozirda sog'liqni saqlash uchun gadjet (masalan, aqlli soat, fitnes-tracker) ishlatmoqdamisiz?</label>
+        <div class="radio-group">
+            <input type="radio" name="health_wearable" value="Yes" id="wearable-yes">
+            <label for="wearable-yes">Ha</label>
+            <input type="radio" name="health_wearable" value="No" id="wearable-no">
+            <label for="wearable-no">Yo'q</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Agar ha bo'lsa, qaysi turdagi gadjet ishlatasiz?</label>
+        <div class="radio-group">
+            <input type="radio" name="wearable_type" value="Smartwatch" id="wearable-smartwatch">
+            <label for="wearable-smartwatch">Aqlli soat</label>
+            <input type="radio" name="wearable_type" value="Fitness_Tracker" id="wearable-fitness-tracker">
+            <label for="wearable-fitness-tracker">Fitnes-tracker</label>
+            <input type="radio" name="wearable_type" value="Other" id="wearable-other">
+            <label for="wearable-other">Boshqa</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Qancha tez-tez gadjetingizni ishlatasiz?</label>
+        <div class="radio-group">
+            <input type="radio" name="wearable_usage_frequency" value="Daily" id="wearable-daily">
+            <label for="wearable-daily">Har kuni</label>
+            <input type="radio" name="wearable_usage_frequency" value="Several_times_week" id="wearable-several-week">
+            <label for="wearable-several-week">Haftada bir necha marta</label>
+            <input type="radio" name="wearable_usage_frequency" value="Rarely" id="wearable-rarely">
+            <label for="wearable-rarely">Kamdan-kam</label>
+            <input type="radio" name="wearable_usage_frequency" value="Never" id="wearable-never">
+            <label for="wearable-never">Hech qachon</label>
+        </div>
+    </div>
+  </fieldset>
+<!-- Uyqu va Dam olish -->
+<fieldset>
+    <legend>Uyqu & Dam olish</legend>
+    <div class="form-group">
+        <label>O'rtacha, har kecha necha soat uxlaysiz?</label>
+        <div class="radio-group">
+            <input type="radio" name="sleep_hours" value="Less_than_5" id="sleep-less-5">
+            <label for="sleep-less-5">5 soatdan kam</label>
+            <input type="radio" name="sleep_hours" value="5_7_hours" id="sleep-5-7">
+            <label for="sleep-5-7">5-7 soat</label>
+            <input type="radio" name="sleep_hours" value="8_10_hours" id="sleep-8-10">
+            <label for="sleep-8-10">8-10 soat</label>
+            <input type="radio" name="sleep_hours" value="More_than_10" id="sleep-more-10">
+            <label for="sleep-more-10">10 soatdan ko'proq</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Uyqudan turganingizda dam olganingizni sezamiz?</label>
+        <div class="radio-group">
+            <input type="radio" name="sleep_quality" value="Yes" id="sleep-quality-yes">
+            <label for="sleep-quality-yes">Ha</label>
+            <input type="radio" name="sleep_quality" value="No" id="sleep-quality-no">
+            <label for="sleep-quality-no">Yo'q</label>
+        </div>
+    </div>
+  </fieldset>
+  
+  <!-- Stress Darajalari -->
+  <fieldset>
+    <legend>Stress Darajalari</legend>
+    <div class="form-group">
+        <label>Kunlik hayotingizda necha marta stressni sezishingiz?</label>
+        <div class="radio-group">
+            <input type="radio" name="stress_level" value="Always" id="stress-always">
+            <label for="stress-always">Har doim</label>
+            <input type="radio" name="stress_level" value="Frequently" id="stress-frequently">
+            <label for="stress-frequently">Tez-tez</label>
+            <input type="radio" name="stress_level" value="Sometimes" id="stress-sometimes">
+            <label for="stress-sometimes">Ba'zan</label>
+            <input type="radio" name="stress_level" value="Rarely" id="stress-rarely">
+            <label for="stress-rarely">Kamdan-kam</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Odatda stressni qanday yengasiz?</label>
+        <div class="radio-group">
+            <input type="radio" name="stress_coping" value="Exercise" id="stress-exercise">
+            <label for="stress-exercise">Jismoniy mashqlar</label>
+            <input type="radio" name="stress_coping" value="Meditation" id="stress-meditation">
+            <label for="stress-meditation">Meditatsiya</label>
+            <input type="radio" name="stress_coping" value="Talking_to_others" id="stress-talking">
+            <label for="stress-talking">Boshqalar bilan gaplashish</label>
+            <input type="radio" name="stress_coping" value="Avoidance" id="stress-avoidance">
+            <label for="stress-avoidance">Qochish</label>
+        </div>
+    </div>
+  </fieldset>
+  
+  <!-- Yuborish tugmasi -->
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary">Yuborish</button>
+  </div>
+    
