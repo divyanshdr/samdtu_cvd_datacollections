@@ -93,15 +93,19 @@
                 </div>
                 
                 <div class="form-group">
-                    <label for="high_cholesterol">Есть ли у вас высокий уровень холестерина?</label>
-                    <div class="radio-group">
-                        <input type="radio" name="high_cholesterol" value="Yes" id="high-cholesterol-yes">
-                        <label for="high-cholesterol-yes">Да</label>
-            
-                        <input type="radio" name="high_cholesterol" value="No" id="high-cholesterol-no">
-                        <label for="high-cholesterol-no">Нет</label>
-                    </div>
-                </div>
+    <label for="high_cholesterol">Есть ли у вас высокий уровень холестерина?</label>
+    <div class="radio-group">
+        <input type="radio" name="high_cholesterol" value="Yes" id="high-cholesterol-yes">
+        <label for="high-cholesterol-yes">Да</label>
+
+        <input type="radio" name="high_cholesterol" value="No" id="high-cholesterol-no">
+        <label for="high-cholesterol-no">Нет</label>
+
+        <input type="radio" name="high_cholesterol" value="Not checked" id="high-cholesterol-not-checked">
+        <label for="high-cholesterol-not-checked">Не проверено</label>
+    </div>
+</div>
+
             
                 <div class="form-group">
                     <label for="bp_check">Вы проверяли свое артериальное давление в прошлом году?</label>
@@ -173,52 +177,7 @@
   </div>
 </fieldset>
 
-<!-- Физическая активность -->
-<fieldset>
-  <legend>Физическая активность</legend>
-  <div class="form-group">
-      <label for="exercise_intensity">Какова интенсивность вашей физической активности?</label>
-      <div class="radio-group">
-          <input type="radio" name="exercise_intensity" value="Mild" id="exercise-intensity-mild">
-          <label for="exercise-intensity-mild">Легкая</label>
 
-          <input type="radio" name="exercise_intensity" value="Moderate" id="exercise-intensity-moderate">
-          <label for="exercise-intensity-moderate">Умеренная</label>
-
-          <input type="radio" name="exercise_intensity" value="Vigorous" id="exercise-intensity-vigorous">
-          <label for="exercise-intensity-vigorous">Интенсивная</label>
-      </div>
-  </div>
-  <div class="form-group">
-      <label for="exercise_type">Какой вид упражнений вы предпочитаете?</label>
-      <div class="radio-group">
-          <input type="radio" name="exercise_type" value="Walking" id="exercise-type-walking">
-          <label for="exercise-type-walking">Ходьба</label>
-
-          <input type="radio" name="exercise_type" value="Jogging" id="exercise-type-jogging">
-          <label for="exercise-type-jogging">Бег</label>
-
-          <input type="radio" name="exercise_type" value="Strength" id="exercise-type-strength">
-          <label for="exercise-type-strength">Силовые тренировки</label>
-
-          <input type="radio" name="exercise_type" value="Yoga" id="exercise-type-yoga">
-          <label for="exercise-type-yoga">Йога</label>
-      </div>
-  </div>
-  <div class="form-group">
-      <label for="exercise_duration">Сколько времени вы тренируетесь за одно занятие?</label>
-      <div class="radio-group">
-          <input type="radio" name="exercise_duration" value="Less30" id="exercise-duration-less30">
-          <label for="exercise-duration-less30">Менее 30 минут</label>
-
-          <input type="radio" name="exercise_duration" value="30-60" id="exercise-duration-30-60">
-          <label for="exercise-duration-30-60">30-60 минут</label>
-
-          <input type="radio" name="exercise_duration" value="More60" id="exercise-duration-more60">
-          <label for="exercise-duration-more60">Более 60 минут</label>
-      </div>
-  </div>
-</fieldset>
 <!-- Диетические Привычки -->
 <fieldset>
     <legend>Диетические Привычки</legend>
@@ -663,37 +622,7 @@
         </div>
     </div>
   </fieldset>
-<!-- Уровни стресса -->
-<fieldset>
-    <legend>Уровни стресса</legend>
-    <div class="form-group">
-        <label>Как часто вы испытываете стресс в своей повседневной жизни?</label>
-        <div class="radio-group">
-            <input type="radio" name="stress_level" value="Always" id="stress-always">
-            <label for="stress-always">Всегда</label>
-            <input type="radio" name="stress_level" value="Frequently" id="stress-frequently">
-            <label for="stress-frequently">Часто</label>
-            <input type="radio" name="stress_level" value="Sometimes" id="stress-sometimes">
-            <label for="stress-sometimes">Иногда</label>
-            <input type="radio" name="stress_level" value="Rarely" id="stress-rarely">
-            <label for="stress-rarely">Редко</label>
-        </div>
-    </div>
-    <div class="form-group">
-        <label>Как вы обычно справляетесь со стрессом?</label>
-        <div class="radio-group">
-            <input type="radio" name="stress_coping" value="Exercise" id="stress-exercise">
-            <label for="stress-exercise">Физические упражнения</label>
-            <input type="radio" name="stress_coping" value="Meditation" id="stress-meditation">
-            <label for="stress-meditation">Медитация</label>
-            <input type="radio" name="stress_coping" value="Talking_to_others" id="stress-talking">
-            <label for="stress-talking">Разговоры с другими</label>
-            <input type="radio" name="stress_coping" value="Avoidance" id="stress-avoidance">
-            <label for="stress-avoidance">Избежание</label>
-        </div>
-    </div>
-  </fieldset>
-  
+
   <!-- Кнопка отправки -->
   <div class="form-group">
     <button type="submit" class="btn btn-primary">Отправить</button>
